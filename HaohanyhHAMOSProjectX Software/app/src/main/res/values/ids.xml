@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="txtwendu" type="id" />
+    <item name="txtshidu" type="id" />
+    <item name="kaiqi" type="id" />
+    <item name="shijian" type="id" />
+    <item name="txtwendu1" type="id" />
+    <item name="txtshidu1" type="id" />
+</resources>

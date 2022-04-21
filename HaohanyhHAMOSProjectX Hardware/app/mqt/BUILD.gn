@@ -1,0 +1,18 @@
+static_library("mqtt_test_at") {
+    sources = [
+        "mqtt_test.c",
+        "at_entry.c"
+    ]
+
+    include_dirs = [
+        "../oled",
+        "//utils/native/lite/include",
+        "//kernel/liteos_m/components/cmsis/2.0",
+        "//base/iot_hardware/interfaces/kits/wifiiot_lite",
+        "//vendor/hisi/hi3861/hi3861/third_party/lwip_sack/include",
+        "//foundation/communication/interfaces/kits/wifi_lite/wifiservice",
+        "//third_party/pahomqtt/MQTTPacket/src",
+        "//third_party/pahomqtt/MQTTPacket/samples",
+        "//vendor/hisi/hi3861/hi3861/components/at/src"
+    ]
+}
