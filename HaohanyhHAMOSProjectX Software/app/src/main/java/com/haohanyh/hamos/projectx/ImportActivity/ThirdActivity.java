@@ -71,7 +71,7 @@ public class ThirdActivity extends Activity {
     @SuppressLint("SetTextI18n")
     void Huawei() {
         post();
-        String result = get("https://iotda.cn-north-4.myhuaweicloud.com/v5/iot/0d119fff0980102a2fb1c010bcd3cc73/devices/625d28cfecf9c41c38216abe_2454refwefw426/shadow");
+        String result = get("https://iotda.cn-north-4.myhuaweicloud.com/v5/iot/******/devices/******/shadow");
         try {
             JSONObject jsonObj = new JSONObject(result);
             System.out.println("浩瀚银河Huawei函数灰度测试:result=====" + jsonObj);
@@ -145,7 +145,7 @@ public class ThirdActivity extends Activity {
     }
 
     private void post() {
-        String jsonwenben = "{\"auth\":{\"identity\":{\"methods\":[\"password\"],\"password\":{\"user\":{\"domain\":{\"name\":\"zhonghuayouwei_guozhironyao\"},\"name\":\"haohanyhhuawei\",\"password\":\"minecraft0305\"}}},\"scope\":{\"domain\":{\"name\":\"zhonghuayouwei_guozhironyao\"}}}}";
+        String jsonwenben = "{\"auth\":{\"identity\":{\"methods\":[\"password\"],\"password\":{\"user\":{\"domain\":{\"name\":\"******\"},\"name\":\"******\",\"password\":\"******\"}}},\"scope\":{\"domain\":{\"name\":\"******\"}}}}";
         RequestBody body = RequestBody.create(MediaType.parse("application/json;charset=utf-8"), jsonwenben);
         Request request = new Request.Builder()
                 .url("https://iam.cn-north-4.myhuaweicloud.com/v3/auth/tokens")
