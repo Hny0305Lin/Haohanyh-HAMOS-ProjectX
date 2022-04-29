@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-
-</selector>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/white"/>
+    <!--  圆角 <corners android:radius="15dp"/>-->
+    <corners
+        android:topRightRadius="25dp"
+        android:bottomRightRadius="25dp"
+        android:bottomLeftRadius="25dp"
+        android:topLeftRadius="25dp"/>
+    <!-- 背景色 -->
+    <solid android:color="#00000000"/>
+    <!-- 边框色 -->
+    <stroke android:width="2.5dip" android:color="#fec0cb" />
+</shape>

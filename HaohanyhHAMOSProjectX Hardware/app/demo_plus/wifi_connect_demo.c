@@ -26,6 +26,7 @@
  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+ /* 受Haohanyh Computer Software Products Open Source LICENSE保护 https://git.haohanyh.top:3001/Haohanyh/LICENSE */
 
 #include <stdio.h>
 #include <string.h>
@@ -42,8 +43,8 @@ static void WifiConnectTask(void *arg)
 
     // setup your AP params
     WifiDeviceConfig apConfig = {0};
-    strcpy(apConfig.ssid, "HUAWEI-061K4S-haohanyh");
-    strcpy(apConfig.preSharedKey, "qweasdzxcadminLinMengJia155380919120030305");
+    strcpy(apConfig.ssid, "");                  //Wifi名字
+    strcpy(apConfig.preSharedKey, "");          //Wifi密码
     apConfig.securityType = WIFI_SEC_TYPE_PSK;
 
     int netId = ConnectToHotspot(&apConfig);

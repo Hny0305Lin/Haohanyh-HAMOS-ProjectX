@@ -1,6 +1,399 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ImportActivity.FifthActivity"
+    android:background="#f0f0f0f4">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:background="@color/white"
+        android:gravity="center|left"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:gravity="left|center"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:layout_width="24dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/jt">
+
+            </ImageButton>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="设定"
+                android:textColor="@color/black"
+                android:textSize="18dp">
+
+
+            </TextView>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:gravity="left|center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="387dp"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:text="    全屋控制中心"
+                android:textColor="@color/black"
+                android:textSize="20dp">
+
+
+            </TextView>
+
+            <ImageButton
+                android:layout_width="23dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/gd2">
+
+            </ImageButton>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="left|center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="384dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:gravity="left|center"
+                android:text="        更新"
+                android:textColor="@color/black"
+                android:textSize="10dp">
+
+            </TextView>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="left|center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="382dp"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:text="    语言"
+                android:textColor="@color/black"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <ImageButton
+                android:layout_width="23dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/gd2">
+
+            </ImageButton>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="384dp"
+                android:layout_height="53dp"
+                android:gravity="left|center"
+                android:text="         首页"
+                android:textColor="@color/black"
+                android:textSize="10dp">
+
+            </TextView>
+
+            <ImageButton
+                android:layout_width="23dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/gd2">
+
+            </ImageButton>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="328dp"
+                android:layout_height="60dp"
+                android:gravity="left|center"
+                android:text="    快捷开关音效"
+                android:textColor="@color/black"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="384dp"
+                android:layout_height="60dp"
+                android:gravity="left|center"
+                android:text="    分组管理"
+                android:textColor="@color/black"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <ImageButton
+                android:layout_width="23dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/gd2">
+
+            </ImageButton>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="384dp"
+                android:layout_height="60dp"
+                android:gravity="left|center"
+                android:text="    设置"
+                android:textColor="@color/black"
+                android:textSize="10dp">
+
+            </TextView>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="384dp"
+                android:layout_height="60dp"
+                android:gravity="left|center"
+                android:text="    自动发现装置"
+                android:textColor="@color/black"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <ImageButton
+                android:layout_width="23dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/gd2">
+
+            </ImageButton>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="384dp"
+                android:layout_height="60dp"
+                android:gravity="left|center"
+                android:text="    安全设定"
+                android:textColor="@color/black"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <ImageButton
+                android:layout_width="23dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/gd2">
+
+            </ImageButton>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="384dp"
+                android:layout_height="60dp"
+                android:gravity="left|center"
+                android:text="    讯息设定"
+                android:textColor="@color/black"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <ImageButton
+                android:layout_width="23dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/gd2">
+
+            </ImageButton>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center">
+
+            <TextView
+                android:layout_width="384dp"
+                android:layout_height="60dp"
+                android:gravity="left|center"
+                android:text="    单位设定"
+                android:textColor="@color/black"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <ImageButton
+                android:layout_width="23dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/gd2">
+
+            </ImageButton>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="384dp"
+                android:layout_height="60dp"
+                android:gravity="left|center"
+                android:text="      地区语言"
+                android:textColor="@color/black"
+                android:textSize="10dp">
+
+            </TextView>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="384dp"
+                android:layout_height="60dp"
+                android:gravity="left|center"
+                android:text="    地区"
+                android:textColor="@color/black"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <ImageButton
+                android:layout_width="23dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/gd2">
+
+            </ImageButton>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="384dp"
+                android:layout_height="60dp"
+                android:gravity="left|center"
+                android:text="    安全设定"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <ImageButton
+                android:layout_width="23dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/gd2">
+
+            </ImageButton>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

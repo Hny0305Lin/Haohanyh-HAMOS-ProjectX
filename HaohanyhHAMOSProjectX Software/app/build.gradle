@@ -8,7 +8,7 @@ android {
     defaultConfig {
         applicationId "com.haohanyh.hamos.projectx"
         minSdk 21
-        targetSdk 32
+        targetSdk 26
         versionCode 1
         versionName "1.0"
 
@@ -25,12 +25,18 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.4.1'
 
     implementation 'com.google.code.gson:gson:2.7'
+
+    // https://mvnrepository.com/artifact/com.huaweicloud.sdk/huaweicloud-sdk-iotda
+    implementation group: 'com.huaweicloud.sdk', name: 'huaweicloud-sdk-iotda', version: '3.0.85'
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
