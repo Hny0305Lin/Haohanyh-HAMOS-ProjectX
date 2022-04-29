@@ -28,8 +28,8 @@ public class FirstActivity extends Activity {
     static Double haohanyhtemp;//温度
     static Double haohanyhhumi;//湿度
 
-    private static final String DeviceID = "927881450";
-    private static final String ApiKey = "HtgHMEIpPoWPWaQFi8DjL9qFMP8=";
+    private static final String DeviceID = "********";
+    private static final String ApiKey = "***************************=";
     private static final String HaohanyhTemp = "temperature";//onenet平台上对应设备的其中一个数据流的名字
     private static final String HaohanyhHumi = "humidity";//onenet平台上对应设备的其中一个数据流的名字
 
