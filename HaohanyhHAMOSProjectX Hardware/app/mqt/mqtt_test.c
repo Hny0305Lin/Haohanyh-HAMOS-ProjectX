@@ -97,11 +97,11 @@ int mqtt_connect(void)
 
 	printf("Haohanyh IoT AlphaTest [MQTT]Sending to hostname %s port %d\n", host, port);
 
-	data.clientID.cstring = "927881450";			// ClientID
+	data.clientID.cstring = "********";			// ClientID
 	data.keepAliveInterval = 120;
 	data.cleansession = 1;
-	data.username.cstring = "505798";		//Username
-	data.password.cstring = "87Fi9SORrVWQBt1Sp9pqfjlw3to=";	//Password
+	data.username.cstring = "******";		//Username
+	data.password.cstring = "************************=";	//Password
 
 	len = MQTTSerialize_connect(buf, buflen, &data);
 	rc = transport_sendPacketBuffer(mysock, buf, len);
