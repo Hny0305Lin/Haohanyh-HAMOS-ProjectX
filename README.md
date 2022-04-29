@@ -3,7 +3,8 @@ Haohanyh-HAMOS-ProjectX
 
 # 首个采用浩瀚银河的自有中文开源协议项目...
 
-> Haohanyh Computer Software Products Open Source LICENSE
+Haohanyh Computer Software Products Open Source LICENSE
+
 > 下载地址1：https://github.com/Hny0305Lin/LICENSE/blob/main/LICENSE
 > 下载地址2: https://git.haohanyh.top:3001/Haohanyh/LICENSE
 
