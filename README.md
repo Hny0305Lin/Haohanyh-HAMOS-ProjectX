@@ -37,6 +37,9 @@ Haohanyh Computer Software Products Open Source LICENSE
 | 小熊派智能物流(GPS小车定位)  | 80% | 近期准备更新 |
 | 小熊派智能农业(温湿度采集和LED转子控制) | 10% | 近期准备更新 |
 | 小熊派MicroSmall版板(3881和3861差距不大) | 0% | 未来更新 |
+
+| 软件开发情况 | 完工程度 | 后续更新情况 |
+|:----|:----:|:----:|
 | Android APP | 55% | 近期准备更新 |
 | HarmonyOS HAP | 0% | 未来更新 |
 | Windows EXE | 0% | 计划中... |
