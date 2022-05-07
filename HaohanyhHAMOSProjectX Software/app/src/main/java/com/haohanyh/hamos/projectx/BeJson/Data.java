@@ -1,7 +1,7 @@
 /**
  * Copyright 2022 bejson.com
  */
-package com.haohanyh.hamos.projectx;
+package com.haohanyh.hamos.projectx.BeJson;
 import java.util.List;
 
 /**

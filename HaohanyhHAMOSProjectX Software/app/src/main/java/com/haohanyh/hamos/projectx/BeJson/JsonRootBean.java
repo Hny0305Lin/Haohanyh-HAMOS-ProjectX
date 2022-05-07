@@ -1,7 +1,7 @@
 /**
  * Copyright 2022 bejson.com
  */
-package com.haohanyh.hamos.projectx;
+package com.haohanyh.hamos.projectx.BeJson;
 
 /**
  * Auto-generated: 2022-04-21 17:31:29

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--  圆角 <corners android:radius="15dp"/>-->
+    <corners
+        android:topRightRadius="45dp"
+        android:bottomRightRadius="45dp"
+        android:bottomLeftRadius="45dp"
+        android:topLeftRadius="45dp"/>
+    <!-- 背景色 -->
+    <gradient
+        android:startColor="#FFEAF6"
+        android:angle="-45"
+        android:endColor="#FF9DE4"/>
+    <!-- 边框色 -->
+    <stroke android:width="2.5dip" android:color="#FFCBE5" />
+</shape>

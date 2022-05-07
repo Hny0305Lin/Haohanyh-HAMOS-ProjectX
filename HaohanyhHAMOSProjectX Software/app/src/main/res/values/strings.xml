@@ -3,13 +3,19 @@
     <string name="haohanyh_hamos_lights_project">Haohanyh HAMOS：LiGHTs Project</string>
     <string name="fuzhou">浩瀚银河福州智能数据机房</string>
 
-    <string name="haohanyh_hamos_lights_project_manymain1">\t福州智能数据机房 温湿度 Onenet\t</string>
-    <string name="haohanyh_hamos_lights_project_manymain2">\t福州智能数据机房 电灯控制 Huawei\t</string>
-    <string name="haohanyh_hamos_lights_project_manymain3">\t福州智能数据机房 人体感应 Huawei\t</string>
-    <string name="haohanyh_hamos_lights_project_manymain4">\t福州智能数据机房 专车定位 Huawei\t</string>
-    <string name="haohanyh_hamos_lights_project_manymain5">\t系统设置\t</string>
-    <string name="haohanyh_hamos_lights_project_manymain6">\t检测网络\t</string>
-    <string name="haohanyh_hamos_lights_project_manymain7">\t开放源码\t</string>
+    <string name="haohanyh_hamos_lights_project_manymain1">福州机房\t温湿度\tOnenet</string>
+    <string name="haohanyh_hamos_lights_project_manymain2">福州机房\t电灯控制\tHuawei</string>
+    <string name="haohanyh_hamos_lights_project_manymain3">福州机房\t人体感应\tHuawei</string>
+    <string name="haohanyh_hamos_lights_project_manymain4">福州机房\t专车定位\tHuawei</string>
+    <string name="haohanyh_hamos_lights_project_manymain5">系统设置\t</string>
+    <string name="haohanyh_hamos_lights_project_manymain6">检测网络\t</string>
+    <string name="haohanyh_hamos_lights_project_manymain7">开放源码\t</string>
+
+    <string name="haohanyh_hamos_lights_project_manymain_new1">福州机房\t温湿度\tHUAWEI</string>
 
     <string name="mainactivity">浩瀚银河主页面</string>
+    <string name="yhm">用户名</string>
+    <string name="mima">密码</string>
+    <string name="denglv">登录</string>
+    <string name="zhuce">注册</string>
 </resources>

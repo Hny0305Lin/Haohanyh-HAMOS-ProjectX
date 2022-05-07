@@ -1,5 +1,5 @@
 // 受Haohanyh Computer Software Products Open Source LICENSE保护 https://git.haohanyh.top:3001/Haohanyh/LICENSE
-package com.haohanyh.hamos.projectx;
+package com.haohanyh.hamos.projectx.BeJson;
 
 import java.util.List;
 

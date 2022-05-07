@@ -4,14 +4,21 @@ package com.haohanyh.hamos.projectx.ImportActivity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.haohanyh.hamos.projectx.BeJson.Datapoints;
+import com.haohanyh.hamos.projectx.BeJson.Datastreams;
+import com.haohanyh.hamos.projectx.BeJson.JsonRootBean;
 import com.haohanyh.hamos.projectx.util.Json;
 import com.haohanyh.hamos.projectx.*;
+
+import static com.haohanyh.hamos.projectx.R.*;
 
 import java.io.IOException;
 import java.util.List;
@@ -38,30 +45,33 @@ public class FirstActivity extends Activity {
     private TextView shijian;
     private Button kaiqi;
 
+    final Timer timer1st = new Timer();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first);
+        setContentView(layout.activity_first_new);
 
-        txtwendu = findViewById(R.id.txtwendu);
-        txtwendu1 = findViewById(R.id.txtwendu1);
+        txtwendu = findViewById(id.txtwendu);
+        txtwendu1 = findViewById(id.txtwendu1);
 
-        txtshidu = findViewById(R.id.txtshidu);
-        txtshidu1 = findViewById(R.id.txtshidu1);
+        txtshidu = findViewById(id.txtshidu);
+        txtshidu1 = findViewById(id.txtshidu1);
 
-        shijian = findViewById(R.id.shijian);
+        shijian = findViewById(id.shijian);
 
-        Button btnnew = findViewById(R.id.kaiqi);
+        Button btnnew = findViewById(id.kaiqi);
+        ImageButton btnexit = findViewById(id.exit);
 
         /*
-        Timer timer = new Timer();
+        Timer timer4th = new Timer();
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
                 Get();
             }
         };
-        timer.schedule(task,0,1000);
+        timer4th.schedule(task,0,1000);
         */
         btnnew.setOnClickListener(new View.OnClickListener() {
             /*
@@ -74,17 +84,42 @@ public class FirstActivity extends Activity {
             @Override
             public void onClick(View v) {
                 if (btnnew.isClickable()) { //如果是可以点击的，则执行方法
-                    Timer timer = new Timer();
                     TimerTask task = new TimerTask() {
                         @Override
                         public void run() { Get(); }
                     };
-                    timer.schedule(task,0,1000);
+                    timer1st.schedule(task,0,1000);
                     Toast.makeText(FirstActivity.this,"开始读取福州智能数据机房传感器数值",Toast.LENGTH_SHORT).show();
                     btnnew.setClickable(false);
                 }
             }
         });
+
+        btnexit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+                //我已经把退出进程重构了，那么接下来就是好好的调用上面函数即可。
+                timer1st.cancel();
+            }
+        });
+    }
+
+    public boolean onKeyDown(int keyCode, KeyEvent event)
+    {
+        if(keyCode == KeyEvent.KEYCODE_BACK)
+        {
+            onBackPressed();
+            return true;
+        } else {
+            return onKeyDown(keyCode,event);
+        }
+    }
+
+    public void onBackPressed() {
+        Toast.makeText(FirstActivity.this,"正在完全退出进程...",Toast.LENGTH_SHORT).show();
+        super.onBackPressed();
+        timer1st.cancel();
     }
 
     public void Get() {
@@ -109,7 +144,7 @@ public class FirstActivity extends Activity {
                     txtwendu.post(new Runnable() {
                         @Override
                         public void run() {
-                            txtwendu.setText("当前温度："+"\t"+String.format("%.2f°C",haohanyhtemp));
+                            txtwendu.setText("温度："+"\t"+String.format("%.2f°C",haohanyhtemp));
                         }
                     });
                 } catch (IOException e) {
@@ -134,7 +169,7 @@ public class FirstActivity extends Activity {
                     txtshidu.post(new Runnable() {
                         @Override
                         public void run() {
-                            txtshidu.setText("当前湿度："+"\t"+String.format("%.2fhPa",haohanyhhumi));
+                            txtshidu.setText("湿度："+"\t"+String.format("%.2fhPa",haohanyhhumi));
                         }
                     });
                     parseJSONWithGSON(responseData);
@@ -158,9 +193,9 @@ public class FirstActivity extends Activity {
             //String value = points.get(i).getValue();
             //haohanyhtemp = Double.valueOf(points.get(i).getValue().toString());
             //haohanyhhumi = Double.valueOf(points.get(i).getValue().toString());
-            //Log.w("temp","value="+value);
-            //Log.w("humi","value="+value);
-            Log.w("time","time="+time);
+            //Log.i("temp","value="+value);
+            //Log.i("humi","vailue="+value);
+            Log.i("time","time="+time);
             haohanyhtime = points.get(i).getAt().toString();
             shijian.post(new Runnable() {
                 @Override

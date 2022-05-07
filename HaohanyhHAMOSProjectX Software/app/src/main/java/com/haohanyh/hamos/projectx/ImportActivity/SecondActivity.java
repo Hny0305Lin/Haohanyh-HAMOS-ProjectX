@@ -3,12 +3,26 @@ package com.haohanyh.hamos.projectx.ImportActivity;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
+import android.util.Log;
+import android.util.TypedValue;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageSwitcher;
+import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import static com.haohanyh.hamos.projectx.R.*;
+
+import androidx.annotation.NonNull;
 
 import com.haohanyh.hamos.projectx.R;
 
@@ -25,6 +39,7 @@ import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -39,63 +54,123 @@ public class SecondActivity extends Activity {
     private String HUAWEITOKEN = "";
     public TextView txtLuminance;
     public TextView txtLightStatus;
+    private String param = "Led";
+    private MediaType jsonType = MediaType.parse("application/json; charset=utf-8");
+
+    int haohanyhtime = 0;
+
+    //连接超时5秒、响应数据超时5秒
+    private OkHttpClient client = new OkHttpClient.Builder().connectTimeout(5, TimeUnit.SECONDS).readTimeout(5, TimeUnit.SECONDS).build();
 
     final Handler handler = new Handler();
+    final Timer timer2nd = new Timer();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
+        setContentView(layout.activity_second_new);
 
-        Button btnnew = findViewById(R.id.kaiqi);
-        txtLuminance = findViewById(R.id.txtlight);
-        txtLightStatus = findViewById(R.id.txtstatus);
+        Button btnnew = findViewById(id.kaiqi);
+        //灰度测试 按钮控制
+        Button btnctrl = findViewById(id.buttonctrl);
+        ImageButton btnexit = findViewById(id.exit);
+        txtLuminance = findViewById(id.txtlight);
+        txtLightStatus = findViewById(id.txtstatus);
+
+        String status = txtLightStatus.toString();
 
         btnnew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (btnnew.isClickable()) { //如果是可以点击的，则执行方法
-                    Timer timer = new Timer();
                     TimerTask task = new TimerTask() {
                         @Override
-                        public void run() { Huawei(); }
+                        public void run() { Huawei("******","******"); }
                     };
-                    timer.schedule(task, 0, 1000);
+                    timer2nd.schedule(task, 0, 1000);
                     Toast.makeText(SecondActivity.this, "开始读取福州智能数据机房华为IotA接口的光照传感器数值", Toast.LENGTH_SHORT).show();
                     btnnew.setClickable(false);
                 }
             }
         });
+
+        btnexit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(SecondActivity.this,"正在完全退出进程...",Toast.LENGTH_SHORT).show();
+                onBackPressed();
+                timer2nd.cancel();
+            }
+        });
+
+        btnctrl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //控制传感器，新增计数器
+                haohanyhtime++;
+                if((haohanyhtime % 2 != 0))
+                {
+                    if(!status.contains("开着呢"))
+                    {
+                        ControlSenderHUAWEIBetaOn(view,"******","******","Light_Control_Led",param);
+                    } else {
+                        ControlSenderHUAWEIBetaOff(view,"******","******","Light_Control_Led",param);
+                    }
+                } else {
+                    ControlSenderHUAWEIBetaOff(view,"******","******","Light_Control_Led",param);
+                }
+            }
+        });
+    }
+
+    public boolean onKeyDown(int keyCode, KeyEvent event)
+    {
+        if(keyCode == KeyEvent.KEYCODE_BACK)
+        {
+            onBackPressed();
+            return true;
+        } else {
+            return onKeyDown(keyCode,event);
+        }
+    }
+
+    public void onBackPressed() {
+        Toast.makeText(SecondActivity.this,"正在完全退出进程...",Toast.LENGTH_SHORT).show();
+        super.onBackPressed();
+        timer2nd.cancel();
     }
 
     @SuppressLint("SetTextI18n")
-    void Huawei() {
+    public void Huawei(String project_id,String device_id) {
         post();
-        String result = get("https://iotda.cn-north-4.myhuaweicloud.com/v5/iot/******/devices/******/shadow");
+        String result = get("https://iotda.cn-north-4.myhuaweicloud.com/v5/iot/" + project_id + "/devices/" + device_id + "/shadow");
         try {
             JSONObject jsonObj = new JSONObject(result);
-            System.out.println("浩瀚银河Huawei函数灰度测试:result=====" + jsonObj);
+            //System.out.println("浩瀚银河Huawei函数灰度测试:result=====" + jsonObj);
             JSONArray jsonArray = jsonObj.getJSONArray("shadow");
             System.out.println("浩瀚银河Huawei函数灰度测试:shadow=====" + jsonArray);
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject obj = jsonArray.getJSONObject(i);
-                System.out.println("浩瀚银河Huawei函数灰度测试:reported=====");
+                //System.out.println("浩瀚银河Huawei函数灰度测试:reported=====");
                 Object reported = obj.get("reported");
-                System.out.println(reported);
 
                 JSONObject Two = new JSONObject(String.valueOf(reported));
                 String properties = Two.getString("properties");
-                System.out.println("浩瀚银河Huawei函数灰度测试:properties=====" + properties);
+                //System.out.println("浩瀚银河Huawei函数灰度测试:properties=====" + properties);
 
                 JSONObject Lumi = new JSONObject(properties);
                 String Lumiresult = Lumi.getString("Luminance");
-                System.out.println("浩瀚银河Huawei函数灰度测试:Luminance=====" + Lumiresult);
+                //System.out.println("浩瀚银河Huawei函数灰度测试:Luminance=====" + Lumiresult);
 
                 JSONObject Light = new JSONObject(properties);
                 String Lightresult = Light.getString("LightStatus");
-                System.out.println("浩瀚银河Huawei函数灰度测试:Luminance=====" + Lightresult);
+                //System.out.println("浩瀚银河Huawei函数灰度测试:Luminance=====" + Lightresult);
 
                 handler.post(new Runnable() {
+
+                    ImageView imagelight = findViewById(id.light);
+                    ImageView imagestatus = findViewById(id.lamp);
+
                     @Override
                     public void run() {
                         txtLuminance.setText("当前光照值：" + "\n\t" + Lumiresult);
@@ -103,18 +178,25 @@ public class SecondActivity extends Activity {
                         String str201 = "ON";
                         String str202 = "OFF";
                         if (Lightresult.equals(str201)) {
-                            txtLightStatus.setText("是否开灯： " + "\n\t" + "开着呢");
+                            txtLightStatus.setText("\t是否开灯： " + "\n\t" + "开着呢");
+                            imagestatus.setImageResource(drawable.lamp_shine);
                         } else if (Lightresult.equals(str202)) {
-                            txtLightStatus.setText("是否开灯： " + "\n\t" + "关了呢");
+                            txtLightStatus.setText("\t是否开灯： " + "\n\t" + "关了呢");
+                            imagestatus.setImageResource(drawable.lamp);
                         } else {
-                            txtLightStatus.setText("当前状态： " + "\n\t" + Lightresult);
+                            txtLightStatus.setText("\t是否开灯： " + "\n\t" + Lightresult);
+                            imagestatus.setImageResource(drawable.lamp);
+                        }
+
+                        int alight = Integer.parseInt(Lumiresult);
+                        if(alight > 150) {
+                            imagelight.setImageResource(drawable.light_high);
+                        } else {
+                            imagelight.setImageResource(drawable.light);
                         }
 
                     }
                 });
-
-
-
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -133,7 +215,7 @@ public class SecondActivity extends Activity {
             //连接
             connection.connect();
             int responseCode = connection.getResponseCode();
-            System.out.println("浩瀚银河Get函数灰度测试:responseCode=====" + responseCode);
+            //System.out.println("浩瀚银河Get函数灰度测试:responseCode=====" + responseCode);
             if (responseCode == HttpURLConnection.HTTP_OK) {
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(connection.getInputStream(), StandardCharsets.UTF_8));
                 StringBuilder bs = new StringBuilder();
@@ -169,9 +251,120 @@ public class SecondActivity extends Activity {
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                System.out.println("浩瀚银河post函数链接灰度测试: " + response.body().string());
-                System.out.println("浩瀚银河post函数头部读取灰度测试: " + response.header("x-subject-token"));
+                //System.out.println("浩瀚银河post函数链接灰度测试: " + response.body().string());
+                //System.out.println("浩瀚银河post函数头部读取灰度测试: " + response.header("x-subject-token"));
                 HUAWEITOKEN = response.header("x-subject-token");
+            }
+        });
+    }
+
+    private void ControlSenderHUAWEIBetaOn(View v,String project_id,String device_id,String command_name,String command_param) {
+        @SuppressLint("UseSwitchCompatOrMaterialCode")
+        Button toggle = ((Button) v);
+        String json = "";
+
+        JSONObject object = new JSONObject();//我们需要修改值~这个没办法哦~
+
+        String ONorOFF = "";
+        try {
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("service_id", "Light");
+            System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数灰度测试:service_id=====" + jsonObject);
+            jsonObject.put("command_name", "Light_Control_Led");
+            System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数灰度测试:command_name=====" + jsonObject);
+            object.put(command_param, toggle.isClickable() ? "ON" : "ON");
+            System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数灰度测试:开关情况=====" + object);
+            ONorOFF = String.valueOf(object);
+            System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数灰度测试:传参情况=====" + ONorOFF);
+            jsonObject.put("paras", object);
+            String jsonParams = jsonObject.toString();
+            Log.d("TAG", toggle.getText().toString() + ":" + jsonParams);
+            System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数灰度测试:总=====" + jsonParams);
+            json = jsonParams;
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        if (ONorOFF.contains("ON")) {
+            Toast.makeText(this,"灯即将打开",Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this,"灯即将关闭",Toast.LENGTH_SHORT).show();
+        }
+
+        RequestBody body = RequestBody.create(MediaType.parse("application/json;charset=utf-8"), json);
+        Request request = new Request.Builder()
+                .url("https://iotda.cn-north-4.myhuaweicloud.com/v5/iot/" + project_id + "/devices/" + device_id + "/commands")
+                .addHeader("X-Auth-Token",HUAWEITOKEN)
+                .post(body)
+                .build();
+
+        OkHttpClient mOkHttpClient = new OkHttpClient();
+        mOkHttpClient.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数灰度测试: " + e.getLocalizedMessage() + "，灰度测试失败");
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数链接灰度测试: " + response.body().string());
+                System.out.println("出现以上信息，说明传值到华为云，再到开发板，同时到APP上显示情况，成功");
+            }
+        });
+
+    }
+
+    private void ControlSenderHUAWEIBetaOff(View v,String project_id,String device_id,String command_name,String command_param) {
+        @SuppressLint("UseSwitchCompatOrMaterialCode")
+        Button toggle = ((Button) v);
+        String json = "";
+
+        JSONObject object = new JSONObject();//我们需要修改值~这个没办法哦~
+
+        String ONorOFF = "";
+        try {
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("service_id", "Light");
+            System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数灰度测试:service_id=====" + jsonObject);
+            jsonObject.put("command_name", "Light_Control_Led");
+            System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数灰度测试:command_name=====" + jsonObject);
+            object.put(command_param, toggle.isClickable() ? "OFF" : "OFF");
+            System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数灰度测试:开关情况=====" + object);
+            ONorOFF = String.valueOf(object);
+            System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数灰度测试:传参情况=====" + ONorOFF);
+            jsonObject.put("paras", object);
+            String jsonParams = jsonObject.toString();
+            Log.d("TAG", toggle.getText().toString() + ":" + jsonParams);
+            System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数灰度测试:总=====" + jsonParams);
+            json = jsonParams;
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        if (ONorOFF.contains("OFF")) {
+            Toast.makeText(this,"灯即将关闭",Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this,"灯即将打开",Toast.LENGTH_SHORT).show();
+        }
+
+        RequestBody body = RequestBody.create(MediaType.parse("application/json;charset=utf-8"), json);
+        Request request = new Request.Builder()
+                .url("https://iotda.cn-north-4.myhuaweicloud.com/v5/iot/" + project_id + "/devices/" + device_id + "/commands")
+                .addHeader("X-Auth-Token",HUAWEITOKEN)
+                .post(body)
+                .build();
+
+        OkHttpClient mOkHttpClient = new OkHttpClient();
+        mOkHttpClient.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数灰度测试: " + e.getLocalizedMessage() + "，灰度测试失败");
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数链接灰度测试: " + response.body().string());
+                System.out.println("出现以上信息，说明传值到华为云，再到开发板，同时到APP上显示情况，成功");
             }
         });
     }

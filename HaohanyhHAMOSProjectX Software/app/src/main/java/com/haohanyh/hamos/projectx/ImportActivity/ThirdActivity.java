@@ -5,12 +5,15 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.haohanyh.hamos.projectx.R;
+import com.haohanyh.hamos.projectx.R.*;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -41,37 +44,83 @@ public class ThirdActivity extends Activity {
     public TextView txtPeople;
 
     final Handler handler = new Handler();
-    
+    final Timer timer3rd = new Timer();
+
+    private Button btnauto = findViewById(id.auto);
+
+    int haohanyhtime = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_third);
+        setContentView(layout.activity_third_new);
 
-        Button btnnew = findViewById(R.id.kaiqi);
-        txtPeople = findViewById(R.id.txtpeoplestatus);
+        Button btnnew = findViewById(id.kaiqi);
+        ImageButton btnexit = findViewById(id.exit);
+        txtPeople = findViewById(id.txtpeoplestatus);
 
         btnnew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (btnnew.isClickable()) { //如果是可以点击的，则执行方法
-                    Timer timer = new Timer();
                     TimerTask task = new TimerTask() {
                         @Override
-                        public void run() { Huawei(); }
+                        public void run() { Huawei("******","******"); }
                     };
-                    timer.schedule(task,0,1000);
+                    timer3rd.schedule(task,0,1000);
                     Toast.makeText(ThirdActivity.this,"开始读取福州智能数据机房华为IotA接口的人体传感器数值",Toast.LENGTH_SHORT).show();
                     btnnew.setClickable(false);
                 }
             }
         });
-        
+
+        btnexit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(ThirdActivity.this,"正在完全退出进程...",Toast.LENGTH_SHORT).show();
+                onBackPressed();
+                timer3rd.cancel();
+            }
+        });
+    }
+
+    void auto() {
+        btnauto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //控制传感器，新增计数器
+                haohanyhtime++;
+                if((haohanyhtime % 2 != 0))
+                {
+                    ;
+                } else {
+                    ;
+                }
+            }
+        });
+    }
+
+    public boolean onKeyDown(int keyCode, KeyEvent event)
+    {
+        if(keyCode == KeyEvent.KEYCODE_BACK)
+        {
+            onBackPressed();
+            return true;
+        } else {
+            return onKeyDown(keyCode,event);
+        }
+    }
+
+    public void onBackPressed() {
+        Toast.makeText(ThirdActivity.this,"正在完全退出进程...",Toast.LENGTH_SHORT).show();
+        super.onBackPressed();
+        timer3rd.cancel();
     }
 
     @SuppressLint("SetTextI18n")
-    void Huawei() {
+    void Huawei(String project_id,String device_id) {
         post();
-        String result = get("https://iotda.cn-north-4.myhuaweicloud.com/v5/iot/******/devices/******/shadow");
+        String result = get("https://iotda.cn-north-4.myhuaweicloud.com/v5/iot/" + project_id + "/devices/" + device_id + "/shadow");
         try {
             JSONObject jsonObj = new JSONObject(result);
             System.out.println("浩瀚银河Huawei函数灰度测试:result=====" + jsonObj);
@@ -92,17 +141,22 @@ public class ThirdActivity extends Activity {
                 System.out.println("浩瀚银河灰度测试:Infrared_Status====="+Peopleresult);
 
                 handler.post(new Runnable() {
+
+                    ImageView peoplestatus = findViewById(id.people);
+
                     @Override
                     public void run() {
                         String str1 = "Safe";
                         String str2 = "Intrude";
                         if(Peopleresult.equals(str1))
                         {
-                            txtPeople.setText("当前状态： " + "\n\t" +  "安全");
+                            txtPeople.setText("\t当前状态： " + "\n\t" +  "安全");
+                            peoplestatus.setImageResource(drawable.infraned_security);
                         } else if(Peopleresult.equals(str2)) {
-                            txtPeople.setText("当前状态： " + "\n\t" +  "有人闯入");
+                            txtPeople.setText("\t当前状态： " + "\n\t" +  "有人闯入");
+                            peoplestatus.setImageResource(drawable.infraned_warning);
                         } else {
-                            txtPeople.setText("当前状态： " + "\n\t" +  Peopleresult);
+                            txtPeople.setText("\t当前状态： " + "\n\t" +  Peopleresult);
                         }
                     }
                 });

@@ -6,18 +6,31 @@ import static com.haohanyh.hamos.projectx.R.*;
 import static java.lang.Thread.sleep;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
+import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.core.content.ContextCompat;
 
 import com.haohanyh.hamos.projectx.ImportActivity.FifthActivity;
 import com.haohanyh.hamos.projectx.ImportActivity.FirstActivity;
 import com.haohanyh.hamos.projectx.ImportActivity.FourthActivity;
+import com.haohanyh.hamos.projectx.ImportActivity.NewFirstActivity;
 import com.haohanyh.hamos.projectx.ImportActivity.SecondActivity;
 import com.haohanyh.hamos.projectx.ImportActivity.ThirdActivity;
+
+import java.io.IOException;
 
 
 public class MainActivity extends Activity {
@@ -34,6 +47,7 @@ public class MainActivity extends Activity {
         Button btnnew5 = findViewById(id.kaiqi5);
         Button btnnew6 = findViewById(id.kaiqi6);
         Button btnnew7 = findViewById(id.kaiqi7);
+        Button btnnew8 = findViewById(id.kaiqinew);
 
         btnnew.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,9 +106,37 @@ public class MainActivity extends Activity {
         btnnew7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (btnnew7.isClickable()) { //如果是可以点击的，则执行方法
-                    Click7(view);
-                }
+                Context context = MainActivity.this;
+                int bottom = 16;
+                int top = 8;
+                TextView textView = new TextView(context);
+                textView.setText("使用本软件，即认为您允许我们软件的使用协议和开源协议。");
+                textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+                textView.setPadding(0, top, 0, bottom);
+                textView.setGravity(Gravity.CENTER);
+                textView.setTextColor(ContextCompat.getColor(context, color.purple_200));
+                AlertDialog.Builder builder = new AlertDialog.Builder(context)
+                        .setCustomTitle(textView)
+                        .setPositiveButton("我要看看开源协议", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Click7Kaiyuanxieyi(view);
+                            }
+                        })
+                        .setNegativeButton("我要看看使用协议", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Click7Yonghuxieyi(view);
+                            }
+                        });
+                builder.show();
+            }
+        });
+
+        btnnew8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Click8(view);
             }
         });
     }
@@ -137,20 +179,76 @@ public class MainActivity extends Activity {
 
     void Click6(View v)
     {
+        boolean result = ChecknetworkHaohanyh();
+        boolean result2 = ChecknetworkHUAWEI();
         Toast.makeText(MainActivity.this,"检测网络中",Toast.LENGTH_SHORT).show();
+        if ((result) == (result2))
+        {
+            Toast.makeText(MainActivity.this,"与浩瀚银河服务器和华为服务器连接通畅!",Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Toast.makeText(MainActivity.this,"请尝试重新连接网络后再检测!",Toast.LENGTH_SHORT).show();
+        }
     }
 
-    void Click7(View v)
+    private boolean ChecknetworkHaohanyh(){
+        Runtime run = Runtime.getRuntime();
+        try {
+            Process pro = run.exec("ping -c 3 haohanyh.ovh");
+            int res = pro.waitFor();
+            Log.w("TAG", "浩瀚银河灰度测试网络链接ChecknetworkHaohanyh函数结果:" + res);
+            return (res==0);
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    private boolean ChecknetworkHUAWEI(){
+        Runtime run = Runtime.getRuntime();
+        try {
+            Process pro = run.exec("ping -c 3 iotda.cn-north-4.myhuaweicloud.com");
+            int res = pro.waitFor();
+            Log.w("TAG", "浩瀚银河灰度测试网络链接ChecknetworkHUAWEI函数结果:" + res);
+            return (res==0);
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    void Click7Kaiyuanxieyi(View v)
     {
         try {
             sleep(300);
             Toast.makeText(MainActivity.this,"使用浩瀚银河项目开源协议，助力浩瀚银河项目质量提升!",Toast.LENGTH_SHORT).show();
-            Uri uri = Uri.parse("https://raw.githubusercontent.com/Hny0305Lin/LICENSE/main/LICENSE");
+            Uri uri = Uri.parse("https://gcore.jsdelivr.net/gh/Hny0305Lin/LICENSE@main/LICENSE ");
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(intent);
             //finish();//关闭当前活动
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    void Click7Yonghuxieyi(View v)
+    {
+        try {
+            sleep(300);
+            Toast.makeText(MainActivity.this,"HAMOS用户协议，正在跳转中...",Toast.LENGTH_SHORT).show();
+            Uri uri = Uri.parse("https://gcore.jsdelivr.net/gh/Hny0305Lin/LICENSE@main/Haohanyh_protocol.md ");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+            //finish();//关闭当前活动
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    void Click8(View v)
+    {
+        Toast.makeText(MainActivity.this,"即将前往使用华为IotA接口的Agriculture",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MainActivity.this, NewFirstActivity.class);
+        startActivity(intent);
     }
 }

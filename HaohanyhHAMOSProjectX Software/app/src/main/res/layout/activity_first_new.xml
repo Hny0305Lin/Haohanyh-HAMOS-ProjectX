@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImportActivity.FirstActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/haohanyh_hamos_lights_project"
+            android:background="@color/Pink_is_fancy"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="italic"
+            android:gravity="bottom|left" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="left|center"
+            android:orientation="horizontal"
+            android:background="@color/Pink_is_fancy"
+            tools:ignore="RtlHardcoded">
+
+            <ImageButton
+                android:id="@+id/exit"
+                android:layout_width="24dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/jt" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="@string/haohanyh_hamos_lights_project_manymain1"
+                android:textColor="@color/black"
+                android:textSize="18sp">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:background="@drawable/fuzhou1">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="150dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/temp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="" />
+
+                <Space
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/humi"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/txtwendu"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/label_customize_jianbian_02"
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:text="温度：" />
+
+                <Space
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/txtshidu"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/label_customize_jianbian_02"
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:text="湿度：" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp" />
+
+                <Button
+                    android:id="@+id/kaiqi"
+                    android:layout_width="300dp"
+                    android:layout_height="50sp"
+                    android:background="@drawable/label_customize_jianbian_03"
+                    android:text="@string/haohanyh_hamos_lights_project_manymain1"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

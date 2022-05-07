@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImportActivity.ThirdActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/haohanyh_hamos_lights_project"
+            android:background="@color/Pink_is_fancy"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="italic"
+            android:gravity="bottom|left" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="left|center"
+            android:orientation="horizontal"
+            android:background="@color/Pink_is_fancy"
+            tools:ignore="RtlHardcoded">
+
+            <ImageButton
+                android:id="@+id/exit"
+                android:layout_width="24dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/jt" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="@string/haohanyh_hamos_lights_project_manymain3"
+                android:textColor="@color/black"
+                android:textSize="18sp">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:background="@drawable/guangzhou1">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/txtpeoplestatus"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/label_customize_jianbian_04"
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:text="当前状态：" />
+
+
+                <ImageView
+                    android:id="@+id/people"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/infraned_security"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp" />
+
+                <Button
+                    android:id="@+id/kaiqi"
+                    android:layout_width="300dp"
+                    android:layout_height="50sp"
+                    android:background="@drawable/label_customize_jianbian_03"
+                    android:text="@string/haohanyh_hamos_lights_project_manymain3"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/label_customize_nihao234234">
+
+                    <Space
+                        android:layout_width="20sp"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <Button
+                            android:id="@+id/button1"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_nihao234234"
+                            android:text="安全阈值"
+                            android:textColor="@color/Pink_is_justice"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="20sp"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:id="@+id/button2"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_nihao234234"
+                            android:text="报警提醒"
+                            android:textColor="@color/Pink_is_justice"/>
+
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="20sp"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <Button
+                            android:id="@+id/auto"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_nihao234234"
+                            android:text="联动操作"
+                            android:textColor="@color/Pink_is_justice"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="20sp"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:id="@+id/button6"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_nihao234234"
+                            android:text="保存Log"
+                            android:textColor="@color/Pink_is_justice"/>
+
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="20sp"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

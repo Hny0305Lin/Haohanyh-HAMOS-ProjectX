@@ -4,23 +4,39 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.38333333333333336" />
+        <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/drawable/activity_main_button.xml" value="0.34074074074074073" />
         <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/drawable/button_nihao123123.xml" value="0.38333333333333336" />
         <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/drawable/button_nihao234234.xml" value="0.34074074074074073" />
+        <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/drawable/button_nihao345345.xml" value="0.19212962962962962" />
         <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/drawable/ic__3b60cd950d5e__1_.xml" value="0.38333333333333336" />
+        <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/drawable/ic_email_white_24dp.xml" value="0.19212962962962962" />
         <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/drawable/ic_launcher_background.xml" value="0.38333333333333336" />
         <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/drawable/ic_launcher_haohanyh.xml" value="0.38333333333333336" />
+        <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/drawable/ic_lock_white_24dp.xml" value="0.19212962962962962" />
+        <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/drawable/label_customize_jianbian_01.xml" value="0.3365740740740741" />
+        <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/drawable/label_customize_jianbian_02.xml" value="0.3365740740740741" />
+        <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/drawable/label_customize_jianbian_03.xml" value="0.3365740740740741" />
+        <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/drawable/label_customize_jianbian_04.xml" value="0.3365740740740741" />
         <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/drawable/label_customize_nihao123123.xml" value="0.3365740740740741" />
         <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/drawable/label_customize_nihao234234.xml" value="0.3365740740740741" />
+        <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/drawable/main_background.xml" value="0.34074074074074073" />
         <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/layout-w1240dp/content_scrolling.xml" value="0.2359437751004016" />
         <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/layout/activity_fifth.xml" value="0.32222222222222224" />
         <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/layout/activity_first.xml" value="0.3671875" />
+        <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/layout/activity_first_huawei.xml" value="0.3263888888888889" />
+        <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/layout/activity_first_new.xml" value="0.33" />
         <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/layout/activity_fourth.xml" value="0.32222222222222224" />
+        <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/layout/activity_fourth_new.xml" value="0.324537037037037" />
+        <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/layout/activity_login.xml" value="0.3263888888888889" />
         <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/layout/activity_lv1.xml" value="0.3263888888888889" />
-        <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/layout/activity_reg.xml" value="0.33" />
         <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/layout/activity_scrolling_fuzhouhhyh.xml" value="0.3263888888888889" />
         <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/layout/activity_scrolling_fuzhouhhyh_1.xml" value="0.3263888888888889" />
         <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/layout/activity_second.xml" value="0.39807692307692305" />
+        <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/layout/activity_second_new.xml" value="0.32222222222222224" />
         <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/layout/activity_third.xml" value="0.32222222222222224" />
+        <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/layout/activity_third_new.xml" value="0.32222222222222224" />
         <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/layout/content_scrolling.xml" value="0.22" />
         <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/menu/menu_scrolling.xml" value="0.18333333333333332" />
         <entry key="..\:/Haohanyh/Haohanyh/HaohanyhHAMOSProjectX Software/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.38333333333333336" />
