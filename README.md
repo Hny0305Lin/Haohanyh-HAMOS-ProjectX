@@ -1,6 +1,12 @@
 # Haohanyh-HAMOS-ProjectX
 Haohanyh-HAMOS-ProjectX
 
+| 文章地址汇总 | 链接 |
+|:----|----:|
+|51cto文章地址：|[点我访问](https://ost.51cto.com/posts/12170)|
+|电子发烧友地址:|[点我访问](https://bbs.elecfans.com/jishu_2277832_1_1.html)|
+|浩瀚银河Hexo:|[正在编写]|
+
 # 首个采用浩瀚银河的自有中文开源协议项目...
 
 Haohanyh Computer Software Products Open Source LICENSE
