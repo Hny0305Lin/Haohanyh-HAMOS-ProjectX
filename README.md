@@ -37,6 +37,9 @@ Haohanyh Computer Software Products Open Source LICENSE
 | 小熊派智能物流(GPS小车定位)  | 80% | 近期准备更新 |
 | 小熊派智能农业(温湿度采集和LED转子控制) | 10% | 近期准备更新 |
 | 小熊派MicroSmall版板(3881和3861差距不大) | 0% | 未来更新 |
+| Android APP | 55% | 近期准备更新 |
+| HarmonyOS HAP | 0% | 未来更新 |
+| Windows EXE | 0% | 计划中... |
 
 作为浩瀚银河首次在鸿蒙操作系统开发上，交出的一份答卷，我们有信心，有能力，让这样的项目成为我们全新的起点。
 
