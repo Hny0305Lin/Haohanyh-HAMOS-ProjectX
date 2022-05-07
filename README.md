@@ -32,12 +32,9 @@ Haohanyh Computer Software Products Open Source LICENSE
 ### HAMOS 使用 浩瀚银河计算机软件产品源代码开放协议
 ### 永久开源，二次开发和商业化请署名“浩瀚银河”
 使用开源协议：Haohanyh Computer Software Products Open Source LICENSE
-代码开源地址：https://github.com/Hny0305Lin/Haohanyh-HAMOS-ProjectX
 
 > 遵守浩瀚银河开源工程协议，助力浩瀚银河项目质量提升！
 
 ### Copyright (c) 未知 @lengqinjie
 使用开源协议：无（或未知）
 代码开源地址：https://gitee.com/lengqinjie/bearpi_hm_nano
-
-> 遵守浩瀚银河开源工程协议，助力浩瀚银河项目质量提升！
