@@ -41,7 +41,7 @@ Haohanyh Computer Software Products Open Source LICENSE
 
 | 软件开发情况 | 完工程度 | 后续更新情况 |
 |:----|:----:|:----:|
-| Android APP | 55% | 近期准备更新 |
+| Android APP | 77.5% | 近期准备更新 |
 | HarmonyOS HAP | 0% | 未来更新 |
 | Windows EXE | 0% | 计划中... |
 
