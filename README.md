@@ -5,6 +5,7 @@ Haohanyh-HAMOS-ProjectX是我们的一个LiGHTs计划中的部分，目的就是
 |:----|----:|
 |51cto文章地址：|[点我访问](https://ost.51cto.com/posts/12170)|
 |电子发烧友地址:|[点我访问](https://bbs.elecfans.com/jishu_2277832_1_1.html)|
+|知乎文章:|[点我访问](https://zhuanlan.zhihu.com/p/510892259)|
 |浩瀚银河Hexo:|[正在编写]|
 
 # 首个采用浩瀚银河的自有中文开源协议项目...
