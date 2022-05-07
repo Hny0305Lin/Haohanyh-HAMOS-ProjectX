@@ -33,6 +33,12 @@ Haohanyh Computer Software Products Open Source LICENSE
 
 作为浩瀚银河首次在鸿蒙操作系统开发上，交出的一份答卷，我们有信心，有能力，让这样的项目成为我们全新的起点。
 
+> 项目预估5月中旬~6月间完工，届时将成为一份**100%完工、100%开源**的完美作业。
+> 
+> 让这份作业，送给鸿蒙开发者、浩瀚银河粉丝、51CTO、电子发烧友等开发者、用户群体。
+>
+> 我们相信技术驱动生活就是现在，我们相信未来的事情就在眼前。
+
 # 项目使用到的开源协议
 
 ### Copyright (c) 2020 Nanjing Xiaoxiongpai Intelligent Technology Co., Ltd.
