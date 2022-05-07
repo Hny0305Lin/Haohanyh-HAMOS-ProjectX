@@ -9,10 +9,12 @@ LICENSE: 我在GitHub、Gitee和Haohanyh云基础服务产品平台Gits等你
 
 版权所有 (C) 2019-FUTURE 浩瀚银河，版权所有。
 
-全称: 浩瀚银河计算机软件产品源代码开放协议 第一版二次修订
+全称: 浩瀚银河计算机软件产品源代码开放协议 第一版三次修订
 
-版本发布时间：(UTC/GMT+08:00)时间 2022年4月18日 14:20:00.00
+版本发布时间：(UTC/GMT+08:00)时间 2022年5月6日 2:26:00.00
 版本使用时间：自产品使用该浩瀚银河计算机软件产品源代码开放协议起，永久使用。
+
+许可：Haohanyh Computer Software Products Open Source LICENSE（浩瀚银河计算机软件产品源代码开放协议）由浩瀚银河团队（甲方负责人常住地址在中国 福建省 福州市）主要人员起草。任何人均可使用该协议来发布开源代码或闭源代码，仅需按照第二章做好工作即可。
 
 初始：浩瀚银河计算机软件产品源代码开放协议（以下简称协议），有三方面的人员需要保障。
 甲方：为浩瀚银河团队（以下简称浩瀚银河）
@@ -31,6 +33,7 @@ LICENSE: 我在GitHub、Gitee和Haohanyh云基础服务产品平台Gits等你
 
     第一点：协议最终解释权，为浩瀚银河和管理员或管理团队，浩瀚银河只享有协议杜撰、协议分享等符合现有当地法律行为（不会影响丙方对源代码等作品的著作权等重要权力），浩瀚银河不承担使用此协议违法当地法律规定的犯罪行为。
     第二点：浩瀚银河只是一个团队，但浩瀚银河至始至终都会享有该协议的著作权等符合现有当地法律的权力（毕竟是我们写的）。
+    第三点：甲方、已方、丙方须知，开源星球中的开源不等于“免费”，开源不等于“无版权”，开源生态的发展，需要甲方、已方、丙方，共同努力，共同维护。
 
 第一章：
 
@@ -52,12 +55,13 @@ LICENSE: 我在GitHub、Gitee和Haohanyh云基础服务产品平台Gits等你
     第十三点：介于第一章第十三点，如果您规定为必须标记本协议，即意味任何的违反操作，是禁止的。
     第十四点：使用了该协议的产品的丙方，您可规定途径开放，即意味任何的违反操作，是禁止的。
     第十五点：使用了该协议的产品的丙方，如果您选择了使用协议开源，但因为人为原因导致协议更换的，此行为将让您项目后续无法直接受《浩瀚银河计算机软件产品源代码开放协议》的保护和可能带来潜在的法律问题。
+    第十六点：使用了该协议的产品的丙方，如果您因为人为原因导致修改甲方协议的，此行为将让您项目后续无法直接受《浩瀚银河计算机软件产品源代码开放协议》的保护和可能带来潜在的法律问题。
 
 第二章：
 
     简称一：计算机软件产品、开源项目or开源代码等符合名词解释“代码(源代码)”的，在第二章内容以下简称为“产品”
 
-    第一点：如您希望协议使用在您的产品等，那么请做好如下的标记行为↓
+    第一点：如您希望协议使用在您的产品等，那么请做好如下的标记行为↓（浩瀚银河Git代码托管平台）
         HTML / XML            <!-- 受Haohanyh Computer Software Products Open Source LICENSE保护 https://git.haohanyh.top:3001/Haohanyh/LICENSE -->
         C / C++ / Java / JS     // 受Haohanyh Computer Software Products Open Source LICENSE保护 https://git.haohanyh.top:3001/Haohanyh/LICENSE
         C / C++ / Java / JS     /* 受Haohanyh Computer Software Products Open Source LICENSE保护 https://git.haohanyh.top:3001/Haohanyh/LICENSE */
@@ -75,6 +79,42 @@ LICENSE: 我在GitHub、Gitee和Haohanyh云基础服务产品平台Gits等你
         .ini / .inf文件          ; 受Haohanyh Computer Software Products Open Source LICENSE保护 https://git.haohanyh.top:3001/Haohanyh/LICENSE
         文本文件           直接填写：受Haohanyh Computer Software Products Open Source LICENSE保护 https://git.haohanyh.top:3001/Haohanyh/LICENSE
         .........
+        ↓（海外Github）
+        HTML / XML            <!-- 受Haohanyh Computer Software Products Open Source LICENSE保护 https://github.com/Hny0305Lin/LICENSE/blob/main/LICENSE -->
+        C / C++ / Java / JS     // 受Haohanyh Computer Software Products Open Source LICENSE保护 https://github.com/Hny0305Lin/LICENSE/blob/main/LICENSE
+        C / C++ / Java / JS     /* 受Haohanyh Computer Software Products Open Source LICENSE保护 https://github.com/Hny0305Lin/LICENSE/blob/main/LICENSE */
+        C#(CSharp)             /// 受Haohanyh Computer Software Products Open Source LICENSE保护 https://github.com/Hny0305Lin/LICENSE/blob/main/LICENSE ///
+        (Ps:CSharp有一些特殊，不过能注释就行)
+        Matlab                   % 受Haohanyh Computer Software Products Open Source LICENSE保护 https://github.com/Hny0305Lin/LICENSE/blob/main/LICENSE
+        Pasca                    { 受Haohanyh Computer Software Products Open Source LICENSE保护 https://github.com/Hny0305Lin/LICENSE/blob/main/LICENSE }
+        Delphi                   { 受Haohanyh Computer Software Products Open Source LICENSE保护 https://github.com/Hny0305Lin/LICENSE/blob/main/LICENSE }
+        Fortran                  ! 受Haohanyh Computer Software Products Open Source LICENSE保护 https://github.com/Hny0305Lin/LICENSE/blob/main/LICENSE
+        CSS                     /* 受Haohanyh Computer Software Products Open Source LICENSE保护 https://github.com/Hny0305Lin/LICENSE/blob/main/LICENSE */
+        ASP                    rem 受Haohanyh Computer Software Products Open Source LICENSE保护 https://github.com/Hny0305Lin/LICENSE/blob/main/LICENSE
+        JSP                   <%-- 受Haohanyh Computer Software Products Open Source LICENSE保护 https://github.com/Hny0305Lin/LICENSE/blob/main/LICENSE --%>
+        批处理.bat              rem 受Haohanyh Computer Software Products Open Source LICENSE保护 https://github.com/Hny0305Lin/LICENSE/blob/main/LICENSE
+        注册表.reg               ; 受Haohanyh Computer Software Products Open Source LICENSE保护 https://github.com/Hny0305Lin/LICENSE/blob/main/LICENSE
+        .ini / .inf文件          ; 受Haohanyh Computer Software Products Open Source LICENSE保护 https://github.com/Hny0305Lin/LICENSE/blob/main/LICENSE
+        文本文件           直接填写：受Haohanyh Computer Software Products Open Source LICENSE保护 https://github.com/Hny0305Lin/LICENSE/blob/main/LICENSE
+        .........
+        ↓（中国大陆Gitee）
+        HTML / XML            <!-- 受Haohanyh Computer Software Products Open Source LICENSE保护 https://gitee.com/su-muyao/LICENSE/blob/main/LICENSE -->
+        C / C++ / Java / JS     // 受Haohanyh Computer Software Products Open Source LICENSE保护 https://gitee.com/su-muyao/LICENSE/blob/main/LICENSE
+        C / C++ / Java / JS     /* 受Haohanyh Computer Software Products Open Source LICENSE保护 https://gitee.com/su-muyao/LICENSE/blob/main/LICENSE */
+        C#(CSharp)             /// 受Haohanyh Computer Software Products Open Source LICENSE保护 https://gitee.com/su-muyao/LICENSE/blob/main/LICENSE ///
+        (Ps:CSharp有一些特殊，不过能注释就行)
+        Matlab                   % 受Haohanyh Computer Software Products Open Source LICENSE保护 https://gitee.com/su-muyao/LICENSE/blob/main/LICENSE
+        Pasca                    { 受Haohanyh Computer Software Products Open Source LICENSE保护 https://gitee.com/su-muyao/LICENSE/blob/main/LICENSE }
+        Delphi                   { 受Haohanyh Computer Software Products Open Source LICENSE保护 https://gitee.com/su-muyao/LICENSE/blob/main/LICENSE }
+        Fortran                  ! 受Haohanyh Computer Software Products Open Source LICENSE保护 https://gitee.com/su-muyao/LICENSE/blob/main/LICENSE
+        CSS                     /* 受Haohanyh Computer Software Products Open Source LICENSE保护 https://gitee.com/su-muyao/LICENSE/blob/main/LICENSE */
+        ASP                    rem 受Haohanyh Computer Software Products Open Source LICENSE保护 https://gitee.com/su-muyao/LICENSE/blob/main/LICENSE
+        JSP                   <%-- 受Haohanyh Computer Software Products Open Source LICENSE保护 https://gitee.com/su-muyao/LICENSE/blob/main/LICENSE --%>
+        批处理.bat              rem 受Haohanyh Computer Software Products Open Source LICENSE保护 https://gitee.com/su-muyao/LICENSE/blob/main/LICENSE
+        注册表.reg               ; 受Haohanyh Computer Software Products Open Source LICENSE保护 https://gitee.com/su-muyao/LICENSE/blob/main/LICENSE
+        .ini / .inf文件          ; 受Haohanyh Computer Software Products Open Source LICENSE保护 https://gitee.com/su-muyao/LICENSE/blob/main/LICENSE
+        文本文件           直接填写：受Haohanyh Computer Software Products Open Source LICENSE保护 https://gitee.com/su-muyao/LICENSE/blob/main/LICENSE
+        .........
     第二点：如您希望协议使用在您的产品等，但非第二章第一点情况，那么您可在传播时，标记版权↓。
         （例如文件属性标记、文件版权标记、水印标记等明显位置的强有力的标注技术行为）
     第三点：如您希望协议使用在您的产品等，但您还希望能包含更多信息，那么您可按照下方标记版权↓。
@@ -88,7 +128,8 @@ LICENSE: 我在GitHub、Gitee和Haohanyh云基础服务产品平台Gits等你
     第六点：如您希望协议使用在您的产品等，您可修改为除本协议的任意协议，但在修改协议前，请保证您清楚修改的后果。
     第七点：介于第一章第一点，和第二章第一点，如您完成了操作，视为同意使用《浩瀚银河计算机软件产品源代码开放协议》，即可开始受协议保护您的权力。
     第八点：如您希望协议使用在您的产品等，您可使用但不可修改协议，所以请您确保您能在开源期间遵守协议规定。
-    第九点：介于第二章第七点，再次声明浩瀚银河不承担使用此协议违法当地法律规定的犯罪行为，也拒绝违法当地法律规定的产品等被用本协议。
+    第九点：如您的产品，修改了该软件的源代码，须依据本协议发布修改后的源代码。
+    第十点：介于第二章第七点，再次声明浩瀚银河不承担使用此协议违法当地法律规定的犯罪行为，也拒绝违法当地法律规定的产品等被用本协议。
     
 
 最终章：
@@ -98,5 +139,6 @@ LICENSE: 我在GitHub、Gitee和Haohanyh云基础服务产品平台Gits等你
     第一点：所有使用了该协议的产品，均受《中华人民共和国著作权法》规定的第一章第三条第八点受保护范围。
     第二点：所有使用了该协议的产品，如管理者或管理团队发现违法和违反协议行为，您可以第一时间向有关部门提交证据，追究到底，必要时可对违反协议甚至违法法律的使用者索取赔偿部分。
     第三点：所有使用了该协议的产品，请遵守《中华人民共和国网络安全法》《中华人民共和国数据安全法》《深圳经济特区数据条例》《中华人民共和国香港特别行政区维护国家安全法》和中华人民共和国澳门特别行政区《网络安全法》等中国大陆、中国香港、中国澳门、中国台湾的相关法律。
-    第四点：所有使用了该协议的产品，如有与中国大陆、中国香港、中国澳门、中国台湾的当地法律冲突的规定，请与法律为准。
+    第四点：所有使用了该协议的产品，如有与中国大陆、中国香港、中国澳门、中国台湾的当地法律冲突的规定，请以法律为准。
     第五点：所有使用了该协议的产品，如存在协议纠纷甚至法律纠纷等，请在妥善解决后，再使用我方协议进行代码开源或闭源工作。
+    第六点：所有使用了该协议的产品，如果丙方违反了该协议的任一条款，该授权协议将自动终止，甲方保留通过法律手段追究责任的权利。
