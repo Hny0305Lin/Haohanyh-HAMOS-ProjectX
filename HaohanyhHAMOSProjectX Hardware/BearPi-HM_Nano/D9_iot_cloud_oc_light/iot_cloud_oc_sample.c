@@ -14,6 +14,9 @@
  */
 
 /* 受Haohanyh Computer Software Products Open Source LICENSE保护 https://git.haohanyh.top:3001/Haohanyh/LICENSE */
+
+/* 部分代码来自 https://gitee.com/lengqinjie/bearpi_hm_nano/tree/master 作者@lengqinjie*/
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -51,6 +54,7 @@ typedef enum
 {
     en_msg_cmd = 0,
     en_msg_report,
+    en_get_prop
 }en_msg_type_t;
 
 typedef struct
@@ -112,6 +116,42 @@ static void deal_report_msg(report_t *report)
     return;
 }
 
+
+static void deal_get_properties(cmd_t *cmd)
+{
+    oc_mqtt_profile_service_t service;
+    oc_mqtt_profile_kv_t luminance;
+    oc_mqtt_profile_kv_t led;
+
+    if(g_app_cb.connected != 1){
+        return;
+    }
+
+    service.event_time = NULL;
+    service.service_id = "Light";
+    service.service_property = &luminance;
+    service.nxt = NULL;
+    
+    luminance.key = "Luminance";
+	int lum = (int)E53_SC1_Read_Data();
+    luminance.value = &lum;
+    luminance.type = EN_OC_MQTT_PROFILE_VALUE_INT;
+    luminance.nxt = &led;
+
+    led.key = "LightStatus";
+    led.value = g_app_cb.led ? "ON" : "OFF";
+    led.type = EN_OC_MQTT_PROFILE_VALUE_STRING;
+    led.nxt = NULL;
+
+	///< do the response    
+    oc_mqtt_profile_propertygetresp_t resp;     
+	resp.request_id = cmd->request_id;
+	resp.services = &service;
+    int ret = oc_mqtt_profile_propertygetresp(NULL, &resp);
+	//printf("resp ret = %d\n", ret);
+    return;
+}
+
 //use this function to push all the message to the buffer
 static int msg_rcv_callback(oc_mqtt_profile_msgrcv_t *msg)
 {
@@ -120,7 +160,9 @@ static int msg_rcv_callback(oc_mqtt_profile_msgrcv_t *msg)
     int    buf_len;
     app_msg_t *app_msg;
 
-    if((NULL == msg)|| (msg->request_id == NULL) || (msg->type != EN_OC_MQTT_PROFILE_MSG_TYPE_DOWN_COMMANDS)){
+    if((NULL == msg)|| (msg->request_id == NULL) || 
+		(msg->type != EN_OC_MQTT_PROFILE_MSG_TYPE_DOWN_COMMANDS
+		&& msg->type != EN_OC_MQTT_PROFILE_MSG_TYPE_DOWN_PROPERTYGET)){
         return ret;
     }
 
@@ -132,7 +174,10 @@ static int msg_rcv_callback(oc_mqtt_profile_msgrcv_t *msg)
     app_msg = (app_msg_t *)buf;
     buf += sizeof(app_msg_t);
 
-    app_msg->msg_type = en_msg_cmd;
+	if (msg->type == EN_OC_MQTT_PROFILE_MSG_TYPE_DOWN_COMMANDS)
+    	app_msg->msg_type = en_msg_cmd;
+	else
+		app_msg->msg_type = en_get_prop;
     app_msg->msg.cmd.request_id = buf;
     buf_len = strlen(msg->request_id);
     buf += buf_len + 1;
@@ -267,6 +312,8 @@ static int task_main_entry(void)
             case en_msg_report:
                 deal_report_msg(&app_msg->msg.report);
                 break;
+			case en_get_prop:
+				deal_get_properties(&app_msg->msg.cmd);
             default:
                 break;
             }
