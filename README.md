@@ -1,5 +1,5 @@
 # Haohanyh-HAMOS-ProjectX
-Haohanyh-HAMOS-ProjectX
+Haohanyh-HAMOS-ProjectX是我们的一个LiGHTs计划中的部分，目的就是开源我们在hi3861上与物联网（智能家居）上做的探索。
 
 | 文章地址汇总 | 链接 |
 |:----|----:|
