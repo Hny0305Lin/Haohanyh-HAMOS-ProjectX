@@ -1,8 +1,8 @@
-中国移动Onenet
+# 中国移动Onenet
 
 DeviceID为硬件ID，ApiKey是API密钥（需要手机号验证）
 
-华为云IoTDA
+# 华为云IoTDA
 
 > String result = get("https://iotda.cn-north-4.myhuaweicloud.com/v5/iot/******/devices/******/shadow");
 
@@ -15,6 +15,7 @@ DeviceID为硬件ID，ApiKey是API密钥（需要手机号验证）
 华为云有点特殊，token为24小时（不确定），所以我们得通过POST载下来HUAWEITOKEN，然后再GET请求得到设备影子数据
 
 > void Huawei(String project_id,String device_id,boolean iam)
+>
 > void Huawei(String project_id,String device_id)
 
 第一个为自动化函数，第二个为正常函数，无非就是多了个boolean。
