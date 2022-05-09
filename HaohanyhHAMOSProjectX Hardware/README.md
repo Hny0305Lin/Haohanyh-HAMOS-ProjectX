@@ -4,7 +4,6 @@ BearPi-HM_Nano 小熊派hi3861开发板 四块板子四个案例+MQTT上报到�
 
 四个案例分别如下：
 
-```
 **E53_IS1** 人体红外:[Gitee 小熊派MarkDown](https://gitee.com/bearpi/bearpi-hm_nano/blob/master/applications/BearPi/BearPi-HM_Nano/sample/D11_iot_cloud_oc_infrared/README.md)
 
 ![图片](https://raw.fastgit.org/Hny0305Lin/Haohanyh-HAMOS-ProjectX/master/HaohanyhHAMOSProjectX%20Resource/E53_IS1%E5%AE%89%E8%A3%85.png)
@@ -21,4 +20,3 @@ BearPi-HM_Nano 小熊派hi3861开发板 四块板子四个案例+MQTT上报到�
 
 ![图片](https://raw.fastgit.org/Hny0305Lin/Haohanyh-HAMOS-ProjectX/master/HaohanyhHAMOSProjectX%20Resource/E53_ST1%E5%AE%89%E8%A3%85.png)
 
-```
