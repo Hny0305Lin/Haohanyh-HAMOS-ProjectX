@@ -3,14 +3,14 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.haohanyh.hamos.projectx"
         minSdk 21
         targetSdk 26
         versionCode 1
-        versionName "2.0.1.2022.0508.Haohanyh.Release"
+        versionName "2.1.30.2022.0508.Haohanyh.Release"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
