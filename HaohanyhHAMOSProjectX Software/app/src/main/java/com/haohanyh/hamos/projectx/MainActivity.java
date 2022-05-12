@@ -49,6 +49,8 @@ public class MainActivity extends Activity {
         Button btnnew7 = findViewById(id.kaiqi7);
         Button btnnew8 = findViewById(id.kaiqinew);
 
+        Button btnliandong = findViewById(id.kaiqi5liandong);
+
         btnnew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -137,6 +139,13 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Click8(view);
+            }
+        });
+
+        btnliandong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Click9(view, "自定义联动");
             }
         });
     }
@@ -249,6 +258,13 @@ public class MainActivity extends Activity {
     {
         Toast.makeText(MainActivity.this,"即将前往使用华为IotA接口的Agriculture",Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(MainActivity.this, NewFirstActivity.class);
+        startActivity(intent);
+    }
+
+    void Click9(View v,String a)
+    {
+        Toast.makeText(MainActivity.this,"即将前往"+a,Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MainActivity.this, ExceedActivity.class);
         startActivity(intent);
     }
 }

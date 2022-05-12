@@ -34,6 +34,8 @@
         <activity android:name=".ImportActivity.FifthActivity" android:exported="true" />
         <activity android:name=".hhyhlogin.Lv2LoginActivity" android:exported="true" />
         <activity android:name=".hhyhlogin.Lv2RegisterActivity" android:exported="true" />
+        <activity android:name=".LianDong.ExceedActivity" android:exported="true" />
+        <activity android:name=".LianDong.ExceedRunActivity" android:exported="true" />
     </application>
 
 </manifest>

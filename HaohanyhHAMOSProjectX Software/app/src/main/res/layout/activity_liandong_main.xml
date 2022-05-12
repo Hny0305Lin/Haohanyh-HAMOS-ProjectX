@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/dust2_ct">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+
+    <CheckBox
+        android:id="@+id/checkBoxKey"
+        android:checked="false"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/on_or_off_liandong"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb1"
+                    android:layout_width="80dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/button_nihao345345"
+                    android:text="温度"
+                    android:textColor="@color/white"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/rb2"
+                    android:layout_width="80dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="28dp"
+                    android:background="@drawable/button_nihao345345"
+                    android:text="湿度"
+                    android:textColor="@color/white"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/rb3"
+                    android:layout_width="80dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/button_nihao345345"
+                    android:text="光照"
+                    android:textColor="@color/white"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/rb4"
+                    android:layout_width="80dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/button_nihao345345"
+                    android:text="人体"
+                    android:textColor="@color/white"
+                    android:textSize="21sp" />
+
+            </RadioGroup>
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="match_parent" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rrb1"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/button_nihao345345"
+                    android:text="@string/xiaoyu"
+                    android:textColor="@color/white"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/rrb2"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="28dp"
+                    android:background="@drawable/button_nihao345345"
+                    android:text="@string/dengyu"
+                    android:textColor="@color/white"
+                    android:textSize="21sp" />
+
+                <RadioButton
+                    android:id="@+id/rrb3"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/button_nihao345345"
+                    android:text="@string/dayu"
+                    android:textColor="@color/white"
+                    android:textSize="21sp" />
+
+            </RadioGroup>
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/editText1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:hint="点击我填写数值"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/white"
+                    android:theme="@style/haohanyh" />
+
+                <EditText
+                    android:id="@+id/editText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:hint="点击我填写0和1"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:theme="@style/haohanyh" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="231dp"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/rb5"
+                    android:layout_width="80dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/button_nihao345345"
+                    android:text="台灯"
+                    android:textColor="@color/white"
+                    android:textSize="21sp" />
+
+                <CheckBox
+                    android:id="@+id/rb6"
+                    android:layout_width="80dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="28dp"
+                    android:background="@drawable/button_nihao345345"
+                    android:text="LED"
+                    android:textColor="@color/white"
+                    android:textSize="21sp" />
+
+                <CheckBox
+                    android:id="@+id/rb7"
+                    android:layout_width="80dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/button_nihao345345"
+                    android:text="风扇"
+                    android:textColor="@color/white"
+                    android:textSize="21sp" />
+
+            </RadioGroup>
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="match_parent" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rrb4"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/button_nihao345345"
+                    android:text="@string/off"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/rrb5"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/button_nihao345345"
+                    android:text="@string/on"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </RadioGroup>
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
