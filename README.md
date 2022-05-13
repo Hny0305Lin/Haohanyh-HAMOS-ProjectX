@@ -79,8 +79,6 @@ Haohanyh-HAMOS-ProjectX是我们的一个LiGHTs计划中的部分，目的就是
 ### 永久开源，二次开发和商业化请署名“浩瀚银河”
 使用开源协议：Haohanyh Computer Software Products Open Source LICENSE
 
-> 遵守浩瀚银河开源工程协议，助力浩瀚银河项目质量提升！
-
 ### Copyright (c) 未知 @lengqinjie
 使用开源协议：无（或未知）
 代码开源地址：https://gitee.com/lengqinjie/bearpi_hm_nano
