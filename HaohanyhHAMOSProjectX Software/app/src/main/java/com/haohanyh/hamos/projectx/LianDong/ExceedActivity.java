@@ -32,11 +32,38 @@ public class ExceedActivity extends Activity {
     Button btnTemp,btnHumi,btnLight,btnInfraned;
     Button btndayu,btndengyu,btnxiaoyu;
     EditText txtnum,txtIO;
+    String num,IorO;
 
     Button btnLamp,btnLED,btnFan;
     Button btnoff,btnon;
 
-    boolean btnsensorI,btnsensorII,btnsensorIII,btnsensorIV,btnbijiaoI,btnbijiaoII,btnbijiaoIII;
+    public boolean btnsensorI;
+    public int sensorI;
+    public boolean btnsensorII;
+    public int sensorII;
+    public boolean btnsensorIII;
+    public int sensorIII;
+    public boolean btnsensorIV;
+    public int sensorIV;
+
+    public boolean btnbijiaoI;
+    public int bijiaoI;
+    public boolean btnbijiaoII;
+    public int bijiaoII;
+    public boolean btnbijiaoIII;
+    public int bijiaoIII;
+
+    public boolean btnuseI;
+    public int useI;
+    public boolean btnuseII;
+    public int useII;
+    public boolean btnuseIII;
+    public int useIII;
+
+    public boolean btnbooloff;
+    public int booloff;
+    public boolean btnboolon;
+    public int boolon;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -76,19 +103,17 @@ public class ExceedActivity extends Activity {
                         if(ExceedGetInformation() == 502)
                         {
                             Toast.makeText(ExceedActivity.this, "灰度测试：您有一项没设置，但没有关系!", Toast.LENGTH_SHORT).show();
-                            Intent i = new Intent(ExceedActivity.this,ExceedRunActivity.class);
-                            startActivity(i);
+                            tp();
                         }
                         if(ExceedGetInformation() == 200)
                         {
                             Toast.makeText(ExceedActivity.this, "灰度测试：您有零项没设置，非常好!", Toast.LENGTH_SHORT).show();
-                            Intent i = new Intent(ExceedActivity.this,ExceedRunActivity.class);
-                            startActivity(i);
+                            tp();
                         }
                         if(ExceedGetInformation() != 404)
                         {
-                            Intent i = new Intent(ExceedActivity.this,ExceedRunActivity.class);
-                            startActivity(i);
+                            Toast.makeText(ExceedActivity.this, "灰度测试：您有一项没设置，但没有关系!", Toast.LENGTH_SHORT).show();
+                            tp();
                         }
                     } else {
                         Toast.makeText(ExceedActivity.this, "您还没设置完毕！", Toast.LENGTH_SHORT).show();
@@ -123,92 +148,150 @@ public class ExceedActivity extends Activity {
                 }
             }
         });
+    }
 
-        btnTemp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                boolean btnsensorI = true;
-                boolean btnsensorII = false;
-                boolean btnsensorIII = false;
-                boolean bensensorIV = false;
-            }
-        });
+    private void tp() {
+        Intent i = new Intent(ExceedActivity.this,ExceedRunActivity.class);
+        Bundle bundle=new Bundle();
+        bundle.putInt("sensorI",sensorI);
+        bundle.putInt("sensorII",sensorII);
+        bundle.putInt("sensorIII",sensorIII);
+        bundle.putInt("sensorIV",sensorIV);
+        bundle.putInt("bijiaoI",bijiaoI);
+        bundle.putInt("bijiaoII",bijiaoII);
+        bundle.putInt("bijiaoIII",bijiaoIII);
+        bundle.putInt("useI",useI);
+        bundle.putInt("useII",useII);
+        bundle.putInt("usrIII",useIII);
+        bundle.putInt("booloff",booloff);
+        bundle.putInt("boolon",boolon);
+        bundle.putInt("num", Integer.parseInt(num));
+        bundle.putInt("IorO", Integer.parseInt(IorO));
+        i.putExtra("bundle", bundle);
+        startActivity(i);
+    }
 
-        btnHumi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                boolean btnsensorI = false;
-                boolean btnsensorII = true;
-                boolean btnsensorIII = false;
-                boolean bensensorIV = false;
-            }
-        });
+    public void TempLiandongClick(View view) {
+        btnsensorI = true;
+        sensorI = 1;
+        btnsensorII = false;
+        sensorII = 0;
+        btnsensorIII = false;
+        sensorIII = 0;
+        btnsensorIV = false;
+        sensorIV = 0;
+    }
 
-        btnLight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                boolean btnsensorI = false;
-                boolean btnsensorII = false;
-                boolean btnsensorIII = true;
-                boolean bensensorIV = false;
-            }
-        });
+    public void HumiLiandongClick(View view) {
+        btnsensorI = false;
+        sensorI = 0;
+        btnsensorII = true;
+        sensorII = 1;
+        btnsensorIII = false;
+        sensorIII = 0;
+        btnsensorIV = false;
+        sensorIV = 0;
+    }
 
-        btnInfraned.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                boolean btnsensorI = false;
-                boolean btnsensorII = false;
-                boolean btnsensorIII = false;
-                boolean bensensorIV = true;
-            }
-        });
+    public void LightLiandongClick(View view) {
+        btnsensorI = false;
+        sensorI = 0;
+        btnsensorII = false;
+        sensorII = 0;
+        btnsensorIII = true;
+        sensorIII = 1;
+        btnsensorIV = false;
+        sensorIV = 0;
+    }
 
-        btnxiaoyu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                boolean btnbijiaoI = true;
-                boolean btnbijiaoII = false;
-                boolean btnbijiaoIII = false;
-            }
-        });
+    public void InfranedLiandongClick(View view) {
+        btnsensorI = false;
+        sensorI = 0;
+        btnsensorII = false;
+        sensorII = 0;
+        btnsensorIII = false;
+        sensorIII = 0;
+        btnsensorIV = true;
+        sensorIV = 1;
+    }
 
-        btndengyu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                boolean btnbijiaoI = false;
-                boolean btnbijiaoII = true;
-                boolean btnbijiaoIII = false;
-            }
-        });
+    public void XiaoyuLiandongClick(View view) {
+        btnbijiaoI = true;
+        bijiaoI = 1;
+        btnbijiaoII = false;
+        bijiaoII = 0;
+        btnbijiaoIII = false;
+        bijiaoIII = 0;
+    }
 
-        btndayu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                boolean btnbijiaoI = false;
-                boolean btnbijiaoII = false;
-                boolean btnbijiaoIII = true;
-            }
-        });
+    public void DengyuLiandongClick(View view) {
+        btnbijiaoI = false;
+        bijiaoI = 0;
+        btnbijiaoII = true;
+        bijiaoII = 1;
+        btnbijiaoIII = false;
+        bijiaoIII = 0;
+    }
+
+    public void DayuLiandongClick(View view) {
+        btnbijiaoI = false;
+        bijiaoI = 0;
+        btnbijiaoII = false;
+        bijiaoII = 1;
+        btnbijiaoIII = true;
+        bijiaoIII = 0;
+    }
+
+    public void LampLiandongCheck(View view) {
+        btnuseI = true;
+        useI = 1;
+        Toast.makeText(ExceedActivity.this,"触发按钮台灯",Toast.LENGTH_SHORT).show();
+    }
+
+    public void LEDLiandongCheck(View view) {
+        btnuseII = true;
+        useII = 1;
+        Toast.makeText(ExceedActivity.this,"触发按钮LED",Toast.LENGTH_SHORT).show();
+    }
+
+    public void FanLiandongCheck(View view) {
+        btnuseIII = true;
+        useIII = 1;
+        Toast.makeText(ExceedActivity.this,"触发按钮风扇",Toast.LENGTH_SHORT).show();
+    }
+
+    public void ONLiandongCheck(View view) {
+        btnbooloff = false;
+        btnboolon = true;
+        booloff = 0;
+        boolon = 1;
+    }
+
+    public void OFFLiandongCheck(View view) {
+        btnbooloff = true;
+        btnboolon = false;
+        booloff = 1;
+        boolon = 0;
     }
 
     private boolean ExceedCheck() {
 
-        String num = txtnum.getText().toString();
-        String IorO = txtIO.getText().toString();
+        num = txtnum.getText().toString();
+        IorO = txtIO.getText().toString();
 
-        if(btnTemp.isClickable() || btnHumi.isClickable() || btnLight.isClickable() || btnInfraned.isClickable()) {
+        if(btnsensorI || btnsensorII || btnsensorIII || btnsensorIV) {
             //第一层 按钮肯定按了嘛,所以接下来是剩下的第一行的控件
-            if(btnxiaoyu.isClickable() || btndengyu.isClickable() || btndayu.isClickable()) {
+            if(btnbijiaoI || btnbijiaoII || btnbijiaoIII) {
                 //第二层 大于小于等于肯定按了一个嘛,所以接下来是剩下的
                 if(num.equals("") && IorO.equals(""))
                 {
                     Toast.makeText(ExceedActivity.this,"目前您还没设置数值，如果是人体感应联动，您还没设置0和1的触发条件！",Toast.LENGTH_SHORT).show();
                     return false;
+                } else {
+                    Toast.makeText(ExceedActivity.this,"正在检查....",Toast.LENGTH_SHORT).show();
+                    cbKey.setChecked(false);
+                    return true;
                 }
-                Toast.makeText(ExceedActivity.this,"正在检查....",Toast.LENGTH_SHORT).show();
-                cbKey.setChecked(false);
-                return true;
             }
             Toast.makeText(ExceedActivity.this,"您还未选择大于、小于、等于的其中一个!",Toast.LENGTH_SHORT).show();
             return false;
@@ -218,10 +301,10 @@ public class ExceedActivity extends Activity {
     }
 
     private boolean ExceedCheck2() {
-        if(btnLamp.isClickable() || btnLED.isClickable() || btnFan.isClickable())
+        if(btnuseI || btnuseII || btnuseIII)
         {
             //第一层 按钮肯定按了嘛,所以接下来是剩下的第二行的控件
-            if(btnoff.isClickable() || btnon.isClickable())
+            if(btnboolon || btnbooloff)
             {
                 Toast.makeText(ExceedActivity.this,"检查完成，您的设置毫无问题!",Toast.LENGTH_SHORT).show();
                 cbKey.setChecked(true);
