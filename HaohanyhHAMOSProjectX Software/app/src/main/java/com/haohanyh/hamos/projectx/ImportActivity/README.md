@@ -1,3 +1,4 @@
+// 受Haohanyh Computer Software Products Open Source LICENSE保护 https://git.haohanyh.top:3001/Haohanyh/LICENSE
 # 中国移动Onenet
 
 DeviceID为硬件ID，ApiKey是API密钥（需要手机号验证）
