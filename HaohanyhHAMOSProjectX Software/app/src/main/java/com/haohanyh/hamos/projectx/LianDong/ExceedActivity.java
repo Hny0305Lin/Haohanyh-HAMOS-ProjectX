@@ -163,7 +163,7 @@ public class ExceedActivity extends Activity {
         bundle.putInt("bijiaoIII",bijiaoIII);
         bundle.putInt("useI",useI);
         bundle.putInt("useII",useII);
-        bundle.putInt("usrIII",useIII);
+        bundle.putInt("useIII",useIII);
         bundle.putInt("booloff",booloff);
         bundle.putInt("boolon",boolon);
         bundle.putInt("num", Integer.parseInt(num));
@@ -171,7 +171,6 @@ public class ExceedActivity extends Activity {
         i.putExtra("bundle", bundle);
         startActivity(i);
     }
-
     public void TempLiandongClick(View view) {
         btnsensorI = true;
         sensorI = 1;
@@ -181,6 +180,7 @@ public class ExceedActivity extends Activity {
         sensorIII = 0;
         btnsensorIV = false;
         sensorIV = 0;
+        Toast.makeText(ExceedActivity.this,"触发温度按钮",Toast.LENGTH_SHORT).show();
     }
 
     public void HumiLiandongClick(View view) {
@@ -192,6 +192,7 @@ public class ExceedActivity extends Activity {
         sensorIII = 0;
         btnsensorIV = false;
         sensorIV = 0;
+        Toast.makeText(ExceedActivity.this,"触发湿度按钮",Toast.LENGTH_SHORT).show();
     }
 
     public void LightLiandongClick(View view) {
@@ -203,6 +204,7 @@ public class ExceedActivity extends Activity {
         sensorIII = 1;
         btnsensorIV = false;
         sensorIV = 0;
+        Toast.makeText(ExceedActivity.this,"触发光照按钮",Toast.LENGTH_SHORT).show();
     }
 
     public void InfranedLiandongClick(View view) {
@@ -214,6 +216,7 @@ public class ExceedActivity extends Activity {
         sensorIII = 0;
         btnsensorIV = true;
         sensorIV = 1;
+        Toast.makeText(ExceedActivity.this,"触发人体按钮",Toast.LENGTH_SHORT).show();
     }
 
     public void XiaoyuLiandongClick(View view) {
@@ -223,6 +226,7 @@ public class ExceedActivity extends Activity {
         bijiaoII = 0;
         btnbijiaoIII = false;
         bijiaoIII = 0;
+        Toast.makeText(ExceedActivity.this,"触发小于",Toast.LENGTH_SHORT).show();
     }
 
     public void DengyuLiandongClick(View view) {
@@ -232,15 +236,17 @@ public class ExceedActivity extends Activity {
         bijiaoII = 1;
         btnbijiaoIII = false;
         bijiaoIII = 0;
+        Toast.makeText(ExceedActivity.this,"触发等于",Toast.LENGTH_SHORT).show();
     }
 
     public void DayuLiandongClick(View view) {
         btnbijiaoI = false;
         bijiaoI = 0;
         btnbijiaoII = false;
-        bijiaoII = 1;
+        bijiaoII = 0;
         btnbijiaoIII = true;
-        bijiaoIII = 0;
+        bijiaoIII = 1;
+        Toast.makeText(ExceedActivity.this,"触发大于",Toast.LENGTH_SHORT).show();
     }
 
     public void LampLiandongCheck(View view) {
