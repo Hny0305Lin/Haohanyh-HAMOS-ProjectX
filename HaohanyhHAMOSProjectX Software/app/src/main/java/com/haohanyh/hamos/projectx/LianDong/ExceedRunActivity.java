@@ -128,57 +128,27 @@ public class ExceedRunActivity extends Activity {
         gnum = bundle.getInt("num");
         gIorO = bundle.getInt("IorO");
 
-        Log.w("浩瀚银河灰度测试中,useI的值:", String.valueOf(useI));
-        Log.w("浩瀚银河灰度测试中,useII的值:", String.valueOf(useII));
-        Log.w("浩瀚银河灰度测试中,useIII的值:", String.valueOf(useIII));
+        int usenum = Checkusenum();
+        int usebijiao = Checkusebijiao();
+        int useonoroff = Checkuseonoroff();
 
-        if(useI == 1) {
-            usenum = 1;
-        }
-        if(useII == 1) {
-            usenum = 2;
-        }
-        if(useI + useII == 2) {
-            usenum = 3;
-        }
-        if(useIII == 1) {
-            usenum = 4;
-        }
-        if(useI + useIII == 2) {
-            usenum = 5;
-        }
-        if(useII + useIII == 2) {
-            usenum = 6;
-        }
-        if(useI + useII + useIII == 3) {
-            usenum = 7;
+        Log.w("浩瀚银河灰度测试中,usenum:", String.valueOf(usenum));
+        Log.w("浩瀚银河灰度测试中,usebijiao:", String.valueOf(usebijiao));
+        Log.w("浩瀚银河灰度测试中,useonoroff:", String.valueOf(useonoroff));
+
+        if(sensor1 == 1) {
+            int a = 1;
+            String project_id = "0d119fff0980102a2fb1c010bcd3cc73";
+            String device_id = "625d28cfecf9c41c38216abe_2454refwefw428";
+            String result = get("https://iotda.cn-north-4.myhuaweicloud.com/v5/iot/" + project_id + "/devices/" + device_id + "/shadow");
+            Log.w("浩瀚银河灰度测试中:网络结果为：",result);
+            Huawei(project_id,device_id,a,usenum,usebijiao,useonoroff);
         }
 
-        if(dayu == 1) {
-            usebijiao = 3;
-        }
-        if(dengyu == 1) {
-            usebijiao = 2;
-        }
-        if(xiaoyu == 1) {
-            usebijiao = 1;
-        }
-
-        if(booloff == 1) {
-            useonoroff = 2;
-        } else {
-            useonoroff = 1;
-        }
-
-        Log.w("浩瀚银河灰度测试中,usenum的值:", String.valueOf(usenum));
-
-        if(sensor1 == 1 || sensor2 == 1) {
+        if(sensor2 == 1) {
             int a = 2;
-            if(sensor1 == 1) {
-                a = 1;
-            }
-            String project_id = "******";
-            String device_id = "******";
+            String project_id = "0d119fff0980102a2fb1c010bcd3cc73";
+            String device_id = "625d28cfecf9c41c38216abe_2454refwefw428";
             String result = get("https://iotda.cn-north-4.myhuaweicloud.com/v5/iot/" + project_id + "/devices/" + device_id + "/shadow");
             Log.w("浩瀚银河灰度测试中:网络结果为：",result);
             Huawei(project_id,device_id,a,usenum,usebijiao,useonoroff);
@@ -186,8 +156,8 @@ public class ExceedRunActivity extends Activity {
 
         if(sensor3 == 1) {
             int a = 3;
-            String project_id = "******";
-            String device_id = "******";
+            String project_id = "0d119fff0980102a2fb1c010bcd3cc73";
+            String device_id = "625d28cfecf9c41c38216abe_2454refwefw425";
             String result = get("https://iotda.cn-north-4.myhuaweicloud.com/v5/iot/" + project_id + "/devices/" + device_id + "/shadow");
             Log.w("浩瀚银河灰度测试中:网络结果为：",result);
             Huawei(project_id,device_id,a,usenum,usebijiao,useonoroff);
@@ -195,12 +165,60 @@ public class ExceedRunActivity extends Activity {
 
         if(sensor4 == 1) {
             int a = 4;
-            String project_id = "******";
-            String device_id = "******";
+            String project_id = "0d119fff0980102a2fb1c010bcd3cc73";
+            String device_id = "625d28cfecf9c41c38216abe_2454refwefw426";
             String result = get("https://iotda.cn-north-4.myhuaweicloud.com/v5/iot/" + project_id + "/devices/" + device_id + "/shadow");
             Log.w("浩瀚银河灰度测试中:网络结果为：",result);
             Huawei(project_id,device_id,a,usenum,usebijiao,useonoroff);
         }
+    }
+
+    int Checkusenum() {
+        if(useI + useII + useIII == 3) {
+            return 7;
+        }
+        if(useII + useIII == 2) {
+            return 6;
+        }
+        if(useI + useIII == 2) {
+            return 5;
+        }
+        if(useIII == 1) {
+            return 4;
+        }
+        if(useI + useII == 2) {
+            return 3;
+        }
+        if(useII == 1) {
+            return 2;
+        }
+        if(useI == 1) {
+            return 1;
+        }
+        return 0;
+    }
+
+    int Checkusebijiao() {
+        if(dayu == 1) {
+            return 3;
+        }
+        if(dengyu == 1) {
+            return 2;
+        }
+        if(xiaoyu == 1) {
+            return 1;
+        }
+        return 0;
+    }
+
+    int Checkuseonoroff() {
+        if(booloff == 1) {
+            return 2;
+        }
+        if(boolon == 1) {
+            return 1;
+        }
+        return 0;
     }
 
     @SuppressLint("SetTextI18n")
@@ -213,7 +231,7 @@ public class ExceedRunActivity extends Activity {
             JSONArray jsonArray = jsonObj.getJSONArray("shadow");
             //System.out.println("浩瀚银河Huawei函数灰度测试:shadow=====" + jsonArray);
             for(int i = 0;i < jsonArray.length(); i++) {
-                Log.w("TAG", String.valueOf(usenum));
+                Log.w("浩瀚银河灰度测试中:三个家电设置情况为:", String.valueOf(usenum));
                 if(a == 1) {
                     JSONObject obj = jsonArray.getJSONObject(i);
                     Object reported = obj.get("reported");
@@ -240,18 +258,18 @@ public class ExceedRunActivity extends Activity {
                             if(usenum == 7) {
                                 ReadySend(1,useonoroff);
                                 ReadySend(2,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 6) {
                                 ReadySend(2,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 5) {
                                 ReadySend(1,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 4) {
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 3) {
                                 ReadySend(1,useonoroff);
@@ -270,18 +288,18 @@ public class ExceedRunActivity extends Activity {
                             if(usenum == 7) {
                                 ReadySend(1,useonoroff);
                                 ReadySend(2,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 6) {
                                 ReadySend(2,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 5) {
                                 ReadySend(1,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 4) {
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 3) {
                                 ReadySend(1,useonoroff);
@@ -300,18 +318,18 @@ public class ExceedRunActivity extends Activity {
                             if(usenum == 7) {
                                 ReadySend(1,useonoroff);
                                 ReadySend(2,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 6) {
                                 ReadySend(2,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 5) {
                                 ReadySend(1,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 4) {
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 3) {
                                 ReadySend(1,useonoroff);
@@ -352,18 +370,18 @@ public class ExceedRunActivity extends Activity {
                             if(usenum == 7) {
                                 ReadySend(1,useonoroff);
                                 ReadySend(2,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 6) {
                                 ReadySend(2,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 5) {
                                 ReadySend(1,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 4) {
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 3) {
                                 ReadySend(1,useonoroff);
@@ -382,18 +400,18 @@ public class ExceedRunActivity extends Activity {
                             if(usenum == 7) {
                                 ReadySend(1,useonoroff);
                                 ReadySend(2,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 6) {
                                 ReadySend(2,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 5) {
                                 ReadySend(1,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 4) {
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 3) {
                                 ReadySend(1,useonoroff);
@@ -412,18 +430,18 @@ public class ExceedRunActivity extends Activity {
                             if(usenum == 7) {
                                 ReadySend(1,useonoroff);
                                 ReadySend(2,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 6) {
                                 ReadySend(2,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 5) {
                                 ReadySend(1,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 4) {
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 3) {
                                 ReadySend(1,useonoroff);
@@ -464,18 +482,18 @@ public class ExceedRunActivity extends Activity {
                             if(usenum == 7) {
                                 ReadySend(1,useonoroff);
                                 ReadySend(2,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 6) {
                                 ReadySend(2,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 5) {
                                 ReadySend(1,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 4) {
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 3) {
                                 ReadySend(1,useonoroff);
@@ -494,18 +512,18 @@ public class ExceedRunActivity extends Activity {
                             if(usenum == 7) {
                                 ReadySend(1,useonoroff);
                                 ReadySend(2,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 6) {
                                 ReadySend(2,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 5) {
                                 ReadySend(1,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 4) {
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 3) {
                                 ReadySend(1,useonoroff);
@@ -524,18 +542,18 @@ public class ExceedRunActivity extends Activity {
                             if(usenum == 7) {
                                 ReadySend(1,useonoroff);
                                 ReadySend(2,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 6) {
                                 ReadySend(2,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 5) {
                                 ReadySend(1,useonoroff);
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 4) {
-                                ReadySend(3,useonoroff);
+                                ReadySend(4,useonoroff);
                             }
                             if(usenum == 3) {
                                 ReadySend(1,useonoroff);
@@ -747,43 +765,52 @@ public class ExceedRunActivity extends Activity {
             if(b == 1) {
                 command_param = "Light";
                 command_value = "ON";
-                ControlSenderHUAWEIBetaOn(project_id,device_id,service_id,command_name,command_param,command_value);
-            } else {
+                ControlSenderHUAWEI(project_id,device_id,service_id,command_name,command_param,command_value);
+                Log.w("TAG","LED开");
+            }
+            if(b == 2) {
                 command_param = "Light";
                 command_value = "OFF";
-                ControlSenderHUAWEIBetaOff(project_id,device_id,service_id,command_name,command_param,command_value);
+                ControlSenderHUAWEI(project_id,device_id,service_id,command_name,command_param,command_value);
+                Log.w("TAG","LED关");
             }
         }
         if(sensor == 2) {
+            device_id = "625d28cfecf9c41c38216abe_2454refwefw425";
+            service_id = "Light";
+            command_name = "Light_Control_Led";
+            if(b == 1) {
+                command_param = "Led";
+                command_value = "ON";
+                ControlSenderHUAWEI(project_id,device_id,service_id,command_name,command_param,command_value);
+                Log.w("TAG","台灯开");
+            }
+            if(b == 2) {
+                command_param = "Led";
+                command_value = "OFF";
+                ControlSenderHUAWEI(project_id,device_id,service_id,command_name,command_param,command_value);
+                Log.w("TAG","台灯关");
+            }
+        }
+        if(sensor == 4) {
             device_id = "625d28cfecf9c41c38216abe_2454refwefw428";
             service_id = "Agriculture";
             command_name = "Agriculture_Control_Motor";
             if(b == 1) {
                 command_param = "Motor";
                 command_value = "ON";
-                ControlSenderHUAWEIBetaOn(project_id,device_id,service_id,command_name,command_param,command_value);
-            } else {
+                ControlSenderHUAWEI(project_id,device_id,service_id,command_name,command_param,command_value);
+                Log.w("TAG","风扇开");
+            }
+            if(b == 2) {
                 command_param = "Motor";
                 command_value = "OFF";
-                ControlSenderHUAWEIBetaOff(project_id,device_id,service_id,command_name,command_param,command_value);
-            }
-        }
-        if(sensor == 3) {
-            device_id = "625d28cfecf9c41c38216abe_2454refwefw425";
-            service_id = "Light_Control_Led";
-            if(b == 1) {
-                command_param = "Led";
-                command_value = "ON";
-                ControlSenderHUAWEIBetaOn(project_id,device_id,service_id,command_name,command_param,command_value);
-            } else {
-                command_param = "Led";
-                command_value = "OFF";
-                ControlSenderHUAWEIBetaOff(project_id,device_id,service_id,command_name,command_param,command_value);
+                ControlSenderHUAWEI(project_id,device_id,service_id,command_name,command_param,command_value);
+                Log.w("TAG","风扇关");
             }
         }
     }
-
-    private void ControlSenderHUAWEIBetaOn(String project_id,String device_id,String service_id,String command_name,String command_param,String command_value) {
+    private void ControlSenderHUAWEI(String project_id,String device_id,String service_id,String command_name,String command_param,String command_value) {
         @SuppressLint("UseSwitchCompatOrMaterialCode")
         //Button toggle = ((Button) v);
         String json = "";
@@ -794,18 +821,18 @@ public class ExceedRunActivity extends Activity {
         try {
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("service_id", service_id);
-            //System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数灰度测试:service_id=====" + jsonObject);
+            //System.out.println("浩瀚银河ControlSenderHUAWEI函数灰度测试:service_id=====" + jsonObject);
             jsonObject.put("command_name", command_name);
-            //System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数灰度测试:command_name=====" + jsonObject);
+            //System.out.println("浩瀚银河ControlSenderHUAWEI函数灰度测试:command_name=====" + jsonObject);
             //object.put(command_param, toggle.isClickable() ? "ON" : "ON");
             object.put(command_param, command_value);
-            //System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数灰度测试:开关情况=====" + object);
+            //System.out.println("浩瀚银河ControlSenderHUAWEI函数灰度测试:开关情况=====" + object);
             ONorOFF = String.valueOf(object);
-            //System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数灰度测试:传参情况=====" + ONorOFF);
+            //System.out.println("浩瀚银河ControlSenderHUAWEI函数灰度测试:传参情况=====" + ONorOFF);
             jsonObject.put("paras", object);
             String jsonParams = jsonObject.toString();
             //Log.d("TAG", toggle.getText().toString() + ":" + jsonParams);
-            System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数灰度测试:总=====" + jsonParams);
+            //System.out.println("浩瀚银河ControlSenderHUAWEI函数灰度测试:总=====" + jsonParams);
             json = jsonParams;
         } catch (JSONException e) {
             e.printStackTrace();
@@ -822,62 +849,12 @@ public class ExceedRunActivity extends Activity {
         mOkHttpClient.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数灰度测试: " + e.getLocalizedMessage() + "，灰度测试失败");
+                System.out.println("浩瀚银河ControlSenderHUAWEI函数灰度测试: " + e.getLocalizedMessage() + "，灰度测试失败");
             }
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数链接灰度测试: " + response.body().string());
-                System.out.println("出现以上信息，说明传值到华为云，再到开发板，同时到APP上显示情况，成功");
-            }
-        });
-    }
-
-    private void ControlSenderHUAWEIBetaOff(String project_id,String device_id,String service_id,String command_name,String command_param,String command_value) {
-        @SuppressLint("UseSwitchCompatOrMaterialCode")
-        //Button toggle = ((Button) v);
-        String json = "";
-
-        JSONObject object = new JSONObject();//我们需要修改值~这个没办法哦~
-
-        String ONorOFF = "";
-        try {
-            JSONObject jsonObject = new JSONObject();
-            jsonObject.put("service_id", service_id);
-            //System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数灰度测试:service_id=====" + jsonObject);
-            jsonObject.put("command_name", command_name);
-            //System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数灰度测试:command_name=====" + jsonObject);
-            //object.put(command_param, toggle.isClickable() ? "OFF" : "OFF");
-            object.put(command_param, command_value);
-            //System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数灰度测试:开关情况=====" + object);
-            ONorOFF = String.valueOf(object);
-            //System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数灰度测试:传参情况=====" + ONorOFF);
-            jsonObject.put("paras", object);
-            String jsonParams = jsonObject.toString();
-            //Log.d("TAG", toggle.getText().toString() + ":" + jsonParams);
-            System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数灰度测试:总=====" + jsonParams);
-            json = jsonParams;
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-        RequestBody body = RequestBody.create(MediaType.parse("application/json;charset=utf-8"), json);
-        Request request = new Request.Builder()
-                .url("https://iotda.cn-north-4.myhuaweicloud.com/v5/iot/" + project_id + "/devices/" + device_id + "/commands")
-                .addHeader("X-Auth-Token",HUAWEITOKEN)
-                .post(body)
-                .build();
-
-        OkHttpClient mOkHttpClient = new OkHttpClient();
-        mOkHttpClient.newCall(request).enqueue(new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-                System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数灰度测试: " + e.getLocalizedMessage() + "，灰度测试失败");
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-                System.out.println("浩瀚银河ControlSenderHUAWEIBeta函数链接灰度测试: " + response.body().string());
+                System.out.println("浩瀚银河ControlSenderHUAWEI函数链接灰度测试: " + response.body().string());
                 System.out.println("出现以上信息，说明传值到华为云，再到开发板，同时到APP上显示情况，成功");
             }
         });
@@ -895,7 +872,7 @@ public class ExceedRunActivity extends Activity {
             //连接
             connection.connect();
             int responseCode = connection.getResponseCode();
-            System.out.println("浩瀚银河Get函数灰度测试:responseCode=====" + responseCode);
+            //System.out.println("浩瀚银河Get函数灰度测试:responseCode=====" + responseCode);
             if (responseCode == HttpURLConnection.HTTP_OK) {
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(connection.getInputStream(), StandardCharsets.UTF_8));
                 StringBuilder bs = new StringBuilder();
@@ -907,7 +884,7 @@ public class ExceedRunActivity extends Activity {
             } else if (responseCode == 401) {
                 System.out.println("浩瀚银河Get函数灰度测试:failed");
             }
-            System.out.println("浩瀚银河Get函数灰度测试:content=====" + content);
+            //System.out.println("浩瀚银河Get函数灰度测试:content=====" + content);
             return content;
         } catch (IOException e) {
             e.printStackTrace();
@@ -916,7 +893,7 @@ public class ExceedRunActivity extends Activity {
     }
 
     private void post() {
-        String jsonwenben = "{\"auth\":{\"identity\":{\"methods\":[\"password\"],\"password\":{\"user\":{\"domain\":{\"name\":\"******\"},\"name\":\"******\",\"password\":\"******\"}}},\"scope\":{\"domain\":{\"name\":\"******\"}}}}";
+        String jsonwenben = "{\"auth\":{\"identity\":{\"methods\":[\"password\"],\"password\":{\"user\":{\"domain\":{\"name\":\"zhonghuayouwei_guozhironyao\"},\"name\":\"haohanyhhuawei\",\"password\":\"wodeshijie0305\"}}},\"scope\":{\"domain\":{\"name\":\"zhonghuayouwei_guozhironyao\"}}}}";
         RequestBody body = RequestBody.create(MediaType.parse("application/json;charset=utf-8"), jsonwenben);
         Request request = new Request.Builder()
                 .url("https://iam.cn-north-4.myhuaweicloud.com/v3/auth/tokens")
@@ -936,6 +913,26 @@ public class ExceedRunActivity extends Activity {
                 HUAWEITOKEN = response.header("x-subject-token");
             }
         });
+    }
+
+    public void ExitClick(View view) {
+        onBackPressed();
+    }
+
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode == KeyEvent.KEYCODE_BACK)
+        {
+            onBackPressed();
+            return true;
+        } else {
+            return onKeyDown(keyCode,event);
+        }
+    }
+
+    public void onBackPressed() {
+        Toast.makeText(ExceedRunActivity.this,"正在完全退出进程...",Toast.LENGTH_SHORT).show();
+        super.onBackPressed();
+        newliandongtimer.cancel();
     }
 
 }

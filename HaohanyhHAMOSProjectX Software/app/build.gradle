@@ -10,7 +10,7 @@ android {
         minSdk 21
         targetSdk 26
         versionCode 1
-        versionName "3.0.89.2022.0512.Haohanyh.Release"
+        versionName "3.0.120.2022.0512.Haohanyh.Aurora"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
