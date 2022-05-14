@@ -146,12 +146,19 @@ void Huawei(String project_id, String device_id, int a, int usenum, int usebijia
 ```
 
 > project_id 为 项目ID
+
 > device_id 为 硬件ID
+
 > 以上两个String，是在华为云IoTDA里面设置的值！！！不是自己写的！！！
+
 > a 为 使用的传感器是什么
+
 > usenum 为 Checkusenum()返回所需家电控制结果
+
 > usebijiao 为 Checkusebijiao()返回所需触发条件结果
+
 > useonoroff 为 Checkuseonoroff()返回所需触发开关要求结果
+
 > a、usebijiao、usenum，是丢到里面if比较的，比较成功了，直接把结果，传给ReadySend方法（带上useonoroff）
 
 > a、usenum，同时也是搞定需要展示数据在APP上面的重要参数。
