@@ -163,12 +163,19 @@ void ReadySend(int sensor,int b) {...}
 ```
 
 > 自带6个函数，需要开发者修改
-> project_id 为 项目ID      IoTDA主页————API检索与调试————随便点一个API，就能看到项目ID了。
+
+> project_id 为 项目ID IoTDA主页————API检索与调试————随便点一个API，就能看到项目ID了。
+
 > 也可以通过https://support.huaweicloud.com/api-iothub/iot_06_v5_1001.html  获取项目ID
-> device_id 为 硬件ID       IoTDA主页————设备接入————设备————所有设备————设备ID那一栏，就有复制按钮了
-> service_id 为 服务ID      IoTDA主页————设备接入————产品————产品名称————查看，就能看到服务ID了
-> command_name 为 命令名字  IoTDA主页————设备接入————产品————产品名称————查看，就能看到命令名字了
+
+> device_id 为 硬件ID IoTDA主页————设备接入————设备————所有设备————设备ID那一栏，就有复制按钮了
+
+> service_id 为 服务ID IoTDA主页————设备接入————产品————产品名称————查看，就能看到服务ID了
+
+> command_name 为 命令名字 IoTDA主页————设备接入————产品————产品名称————查看，就能看到命令名字了
+
 > command_param 为 下发参数 IoTDA主页————设备接入————产品————产品名称————查看，就能看到下发参数了
+
 > command_value 为 响应参数 一般为ON、OFF
 
 ``` java
