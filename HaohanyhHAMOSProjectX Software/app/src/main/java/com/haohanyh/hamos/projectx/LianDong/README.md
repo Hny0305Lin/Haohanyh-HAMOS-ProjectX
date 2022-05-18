@@ -195,19 +195,19 @@ void ReadySend(int sensor,int b) {...}
     String project_id = "******";
 ```
 
-> 函数工作情况如下：当sensor（家电）为1（LED灯）时，确认硬件ID和服务ID为LED的，控制名字为XXXXX，当b（开关结果）为1（开）时，LED灯开。
+> 函数工作情况如下：当sensor（家电）为1（台灯）时，确认硬件ID和服务ID为LED的，控制名字为XXXXX，当b（开关结果）为1（开）时，台灯开。
 > 以下为实现代码例子：
 
 ``` java
     if(sensor == 1) {
-        device_id = "625d28cfecf9c41c38216abe_2454refwefw428";
-        service_id = "Agriculture";
-        command_name = "Agriculture_Control_light";
+        device_id = "****";
+        service_id = "Light";
+        command_name = "Light_Control_Led";
         if(b == 1) {
-            command_param = "Light";
+            command_param = "Led";
             command_value = "ON";
             ControlSenderHUAWEI(project_id,device_id,service_id,command_name,command_param,command_value);
-            Log.w("TAG","LED开");
+            Log.w("TAG","台灯开");
         }
     }
 ```

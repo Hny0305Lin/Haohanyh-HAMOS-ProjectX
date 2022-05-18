@@ -758,24 +758,10 @@ public class ExceedRunActivity extends Activity {
 
         String project_id = "0d119fff0980102a2fb1c010bcd3cc73";
 
+        Log.w("浩瀚银河灰度测试中:三个家电开关情况为:", String.valueOf(b));
+        Log.w("浩瀚银河灰度测试中:三个家电对应情况为:", String.valueOf(sensor));
+
         if(sensor == 1) {
-            device_id = "625d28cfecf9c41c38216abe_2454refwefw428";
-            service_id = "Agriculture";
-            command_name = "Agriculture_Control_light";
-            if(b == 1) {
-                command_param = "Light";
-                command_value = "ON";
-                ControlSenderHUAWEI(project_id,device_id,service_id,command_name,command_param,command_value);
-                Log.w("TAG","LED开");
-            }
-            if(b == 2) {
-                command_param = "Light";
-                command_value = "OFF";
-                ControlSenderHUAWEI(project_id,device_id,service_id,command_name,command_param,command_value);
-                Log.w("TAG","LED关");
-            }
-        }
-        if(sensor == 2) {
             device_id = "625d28cfecf9c41c38216abe_2454refwefw425";
             service_id = "Light";
             command_name = "Light_Control_Led";
@@ -790,6 +776,23 @@ public class ExceedRunActivity extends Activity {
                 command_value = "OFF";
                 ControlSenderHUAWEI(project_id,device_id,service_id,command_name,command_param,command_value);
                 Log.w("TAG","台灯关");
+            }
+        }
+        if(sensor == 2) {
+            device_id = "625d28cfecf9c41c38216abe_2454refwefw428";
+            service_id = "Agriculture";
+            command_name = "Agriculture_Control_light";
+            if(b == 1) {
+                command_param = "Light";
+                command_value = "ON";
+                ControlSenderHUAWEI(project_id,device_id,service_id,command_name,command_param,command_value);
+                Log.w("TAG","LED开");
+            }
+            if(b == 2) {
+                command_param = "Light";
+                command_value = "OFF";
+                ControlSenderHUAWEI(project_id,device_id,service_id,command_name,command_param,command_value);
+                Log.w("TAG","LED关");
             }
         }
         if(sensor == 4) {
@@ -810,6 +813,7 @@ public class ExceedRunActivity extends Activity {
             }
         }
     }
+
     private void ControlSenderHUAWEI(String project_id,String device_id,String service_id,String command_name,String command_param,String command_value) {
         @SuppressLint("UseSwitchCompatOrMaterialCode")
         //Button toggle = ((Button) v);
