@@ -26,6 +26,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" android:exported="true" />
+        <activity android:name=".MainNewActivity" android:exported="true" />
         <activity android:name=".ImportActivity.FirstActivity" android:exported="true" />
         <activity android:name=".ImportActivity.NewFirstActivity" android:exported="true" />
         <activity android:name=".ImportActivity.SecondActivity" android:exported="true" />
