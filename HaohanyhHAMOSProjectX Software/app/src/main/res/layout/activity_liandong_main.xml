@@ -44,7 +44,8 @@
                     android:background="@drawable/button_nihao345345"
                     android:text="温度"
                     android:textColor="@color/white"
-                    android:textSize="21sp" />
+                    android:textSize="21sp"
+                    android:onClick="TempLiandongClick"/>
 
                 <RadioButton
                     android:id="@+id/rb2"
@@ -54,7 +55,8 @@
                     android:background="@drawable/button_nihao345345"
                     android:text="湿度"
                     android:textColor="@color/white"
-                    android:textSize="21sp" />
+                    android:textSize="21sp"
+                    android:onClick="HumiLiandongClick"/>
 
                 <RadioButton
                     android:id="@+id/rb3"
@@ -64,7 +66,8 @@
                     android:background="@drawable/button_nihao345345"
                     android:text="光照"
                     android:textColor="@color/white"
-                    android:textSize="21sp" />
+                    android:textSize="21sp"
+                    android:onClick="LightLiandongClick"/>
 
                 <RadioButton
                     android:id="@+id/rb4"
@@ -74,7 +77,8 @@
                     android:background="@drawable/button_nihao345345"
                     android:text="人体"
                     android:textColor="@color/white"
-                    android:textSize="21sp" />
+                    android:textSize="21sp"
+                    android:onClick="InfranedLiandongClick"/>
 
             </RadioGroup>
 
@@ -93,7 +97,8 @@
                     android:background="@drawable/button_nihao345345"
                     android:text="@string/xiaoyu"
                     android:textColor="@color/white"
-                    android:textSize="21sp" />
+                    android:textSize="21sp"
+                    android:onClick="XiaoyuLiandongClick"/>
 
                 <RadioButton
                     android:id="@+id/rrb2"
@@ -103,7 +108,8 @@
                     android:background="@drawable/button_nihao345345"
                     android:text="@string/dengyu"
                     android:textColor="@color/white"
-                    android:textSize="21sp" />
+                    android:textSize="21sp"
+                    android:onClick="DengyuLiandongClick"/>
 
                 <RadioButton
                     android:id="@+id/rrb3"
@@ -113,7 +119,8 @@
                     android:background="@drawable/button_nihao345345"
                     android:text="@string/dayu"
                     android:textColor="@color/white"
-                    android:textSize="21sp" />
+                    android:textSize="21sp"
+                    android:onClick="DayuLiandongClick"/>
 
             </RadioGroup>
 
@@ -159,20 +166,22 @@
             android:layout_height="231dp"
             android:orientation="horizontal">
 
-            <RadioGroup
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                <CheckBox
+                <RadioButton
                     android:id="@+id/rb5"
                     android:layout_width="80dp"
                     android:layout_height="48dp"
                     android:background="@drawable/button_nihao345345"
                     android:text="台灯"
                     android:textColor="@color/white"
-                    android:textSize="21sp" />
+                    android:textSize="21sp"
+                    android:onClick="LampLiandongCheck"/>
 
-                <CheckBox
+                <RadioButton
                     android:id="@+id/rb6"
                     android:layout_width="80dp"
                     android:layout_height="48dp"
@@ -180,9 +189,10 @@
                     android:background="@drawable/button_nihao345345"
                     android:text="LED"
                     android:textColor="@color/white"
-                    android:textSize="21sp" />
+                    android:textSize="21sp"
+                    android:onClick="LEDLiandongCheck"/>
 
-                <CheckBox
+                <RadioButton
                     android:id="@+id/rb7"
                     android:layout_width="80dp"
                     android:layout_height="48dp"
@@ -190,9 +200,10 @@
                     android:background="@drawable/button_nihao345345"
                     android:text="风扇"
                     android:textColor="@color/white"
-                    android:textSize="21sp" />
+                    android:textSize="21sp"
+                    android:onClick="FanLiandongCheck"/>
 
-            </RadioGroup>
+            </LinearLayout>
 
             <Space
                 android:layout_width="20dp"
@@ -209,7 +220,8 @@
                     android:background="@drawable/button_nihao345345"
                     android:text="@string/off"
                     android:textColor="@color/white"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"
+                    android:onClick="OFFLiandongCheck"/>
 
                 <RadioButton
                     android:id="@+id/rrb5"
@@ -219,7 +231,8 @@
                     android:background="@drawable/button_nihao345345"
                     android:text="@string/on"
                     android:textColor="@color/white"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"
+                    android:onClick="ONLiandongCheck"/>
 
             </RadioGroup>
 

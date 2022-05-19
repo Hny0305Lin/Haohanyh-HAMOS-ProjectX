@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/minecraft365"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <ImageButton
+            android:id="@+id/imageButtonClickToOld"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/exit_new_icon"
+            android:onClick="ClickToOld"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="18"
+            android:textColor="@color/Pink_is_fancy"
+            android:textStyle="italic"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:typeface="monospace"/>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="25dp"
+                android:layout_height="35dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="175dp"
+                android:layout_height="35dp"
+                android:text="柒汐 | 诗琪の家"
+                android:textColor="@color/Pink_is_fancy"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="25dp"
+                android:layout_height="35dp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="175dp"
+                android:layout_height="35dp"
+                android:text="@string/All1"
+                android:textColor="@color/Pink_is_fancy"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center|top">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="6dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardBackgroundColor="#e5d5d5CF"
+                            android:onClick="ClickMain1">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/firster_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_margin="5dp"
+                                    android:text="@string/first_hi3861"
+                                    android:textSize="16sp" />
+
+                                <ImageView
+                                    android:id="@+id/firster_image"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/temp_and_humidity_huawei"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="6dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardBackgroundColor="#E7E4DBCF"
+                            android:onClick="ClickMain3">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/thirder_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_margin="5dp"
+                                    android:text="@string/third_hi3861"
+                                    android:textSize="16sp" />
+
+                                <ImageView
+                                    android:id="@+id/thirder_image"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/lamp_and_light_huawei"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="6dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardBackgroundColor="#E7E4DBCF"
+                            android:onClick="ClickMain5">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/fifther_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_margin="5dp"
+                                    android:text="@string/fifth_hi3861"
+                                    android:textSize="16sp" />
+
+                                <ImageView
+                                    android:id="@+id/fifther_image"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/gps_huawei"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="6dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardBackgroundColor="#e5d5d5CF"
+                            android:onClick="ClickMain2">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/seconder_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_margin="5dp"
+                                    android:text="@string/second_hi3861"
+                                    android:textSize="16sp" />
+
+                                <ImageView
+                                    android:id="@+id/seconder_image"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/temp_and_humi_onenet"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="6dp"
+                            app:cardBackgroundColor="#e5d5d5CF"
+                            app:cardCornerRadius="10dp"
+                            android:onClick="ClickMain4">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/fourther_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_margin="5dp"
+                                    android:text="@string/fourth_hi3861"
+                                    android:textSize="16sp" />
+
+                                <ImageView
+                                    android:id="@+id/fourther_image"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/infraned_huawei"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="6dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardBackgroundColor="#e5d5d5CF"
+                            android:onClick="ClickMain6">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/sixther_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_margin="5dp"
+                                    android:text="@string/sixth_hi3861"
+                                    android:textSize="16sp" />
+
+                                <ImageView
+                                    android:id="@+id/sixther_image"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/custom_huawei"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
