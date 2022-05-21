@@ -1,6 +1,22 @@
 # Haohanyh-HAMOS-ProjectX
 Haohanyh-HAMOS-ProjectX是我们的一个LiGHTs计划中的部分，目的就是开源我们在hi3861上与物联网（智能家居）上做的探索。
 
+# 使用到的硬件 和 硬件重要资料
+### Hi3861 BearPi小熊派 小型主板
+购买地址:[tb](https://item.taobao.com/item.htm?spm=a1z10.5-c-s.w4002-22244473708.15.59475f69JPXE93&id=633296694816)
+芯片资料:[点我下载](https://gitee.com/bearpi/bearpi-hm_nano/raw/master/applications/BearPi/BearPi-HM_Nano/docs/board/BearPi_HM%20Nano%20%E8%8A%AF%E7%89%87%E6%89%8B%E5%86%8C.pdf)
+有关资料:[gitee点我查看](https://gitee.com/bearpi/bearpi-hm_nano)
+
+### Hi3881 BearPi小熊派 带屏+STM32处理器开发板
+购买地址:[tb,目前已下架](https://item.taobao.com/item.htm?id=662078665554)
+原理图:[点我下载](https://gitee.com/bearpi/bearpi-hm_micro_small/blob/master/applications/BearPi/BearPi-HM_Micro/docs/board/BearPi-HM%20Micro%E5%8E%9F%E7%90%86%E5%9B%BE.pdf)
+有关资料:[gitee点我查看南向硬件开发](https://gitee.com/bearpi/bearpi-hm_micro_small) [gitee点我查看北向APP开发](https://gitee.com/bearpi/bearpi-hm_micro_app)
+
+### Hi3861 Hihope润和 开发板
+购买地址:[tb](https://item.taobao.com/item.htm?id=622343426064)
+芯片资料:受限制 或 找不到
+有关资料:[gitee点我查看](https://gitee.com/hihopeorg/HarmonyOS-IoT-Application-Development)
+
 | 文章地址汇总 | 链接 |
 |:----|----:|
 |51cto文章地址：|[点我访问](https://ost.51cto.com/posts/12170)|
