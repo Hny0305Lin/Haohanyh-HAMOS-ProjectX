@@ -113,7 +113,7 @@ Android APP对应版本号:
 
 ### 版权所有 (C) 2019-FUTURE 浩瀚银河，版权所有。
 ### HAMOS 使用 浩瀚银河计算机软件产品源代码开放协议
-### 永久开源，二次开发和商业化请署名“浩瀚银河”
+**永久开源，二次开发和商业化请署名“浩瀚银河”**
 使用开源协议：Haohanyh Computer Software Products Open Source LICENSE
 
 ### Copyright (c) 未知 @lengqinjie
