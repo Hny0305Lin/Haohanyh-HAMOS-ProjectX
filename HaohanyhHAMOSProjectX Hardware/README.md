@@ -1,6 +1,8 @@
-app文件夹为 润和hi3861开发板 温湿度+MQTT上报到中国移动Onenet
-
-BearPi-HM_Nano 小熊派hi3861开发板 四块板子四个案例+MQTT上报到华为云IoTDA
+>Hihope文件夹为 润和hi3861开发板 温湿度+MQTT上报到中国移动Onenet
+>
+>BearPi-HM_Nano 小熊派hi3861开发板 四块板子四个案例+MQTT上报到华为云IoTDA
+>
+>BearPi-HM-Micro 小熊派hi3881带屏折叠 正在开发
 
 四个案例分别如下：
 
