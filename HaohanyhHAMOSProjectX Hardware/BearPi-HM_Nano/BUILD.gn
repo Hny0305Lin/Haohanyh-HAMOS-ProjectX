@@ -12,6 +12,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
+# 浩瀚银河温馨提示:D系列项目，只能编译一个。D系列项目可以和B系列同时编译。
 
 import("//build/lite/config/component/lite_component.gni")
 
@@ -19,6 +21,7 @@ lite_component("app") {
     features = [
         "B2_basic_button:button_example",
         # "D9_iot_cloud_oc_light:cloud_oc_light",
+        # "D12_iot_cloud_oc_agriculture:cloud_oc_agriculture",
         # "D11_iot_cloud_oc_infrared:cloud_oc_infrared",
         "D13_iot_cloud_oc_gps:cloud_oc_gps",
     ]
