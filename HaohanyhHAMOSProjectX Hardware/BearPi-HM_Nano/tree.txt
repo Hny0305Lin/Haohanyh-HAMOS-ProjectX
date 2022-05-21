@@ -2,7 +2,7 @@
 |   |-- BUILD.gn
 |   |-- README.md
 |   `-- button_example.c
-|-- BUILD.gn
+|
 |-- D11_iot_cloud_oc_infrared
 |   |-- BUILD.gn
 |   |-- README.md
@@ -13,6 +13,7 @@
 |   `-- src
 |       |-- E53_IS1.c
 |       `-- wifi_connect.c
+|
 |-- D13_iot_cloud_oc_gps
 |   |-- BUILD.gn
 |   |-- README.md
@@ -23,13 +24,16 @@
 |   `-- src
 |       |-- E53_ST1.c
 |       `-- wifi_connect.c
-`-- D9_iot_cloud_oc_light
-    |-- BUILD.gn
-    |-- README.md
-    |-- include
-    |   |-- E53_SC1.h
-    |   `-- wifi_connect.h
-    |-- iot_cloud_oc_sample.c
-    `-- src
-        |-- E53_SC1.c
-        `-- wifi_connect.c
+|
+|-- D9_iot_cloud_oc_light
+|   |-- BUILD.gn
+|   |-- README.md
+|   |-- include
+|   |   |-- E53_SC1.h
+|   |   `-- wifi_connect.h
+|   |-- iot_cloud_oc_sample.c
+|   `-- src
+|       |-- E53_SC1.c
+|       `-- wifi_connect.c
+|
+`-- BUILD.gn
