@@ -34,7 +34,7 @@ Haohanyh-HAMOS-ProjectX是我们的一个LiGHTs计划中的部分，目的就是
 
 # 首个鸿蒙硬件操作系统与Android APP的结合项目...
 
-### 智能家居(Hihope润和开发板温湿度 + 小熊派智能路灯(家庭灯系) + 小熊派人体感应(门前感应) + 小熊派智能物流(GPS小车定位) + 小熊派智能农业(温湿度采集和LED转子控制))
+### 智能家居(Hihope润和开发板温湿度 + 小熊派智能路灯(家庭灯系) + 小熊派人体感应(门前感应) + 小熊派智能物流(GPS小车定位) + 小熊派智能农业(温湿度采集和LED转子控制) + 小熊派Micro板(基础通讯，有希望技术突破))
 
 目前完工情况：
 
@@ -100,6 +100,11 @@ Android APP对应版本号:
 ### Copyright (c) 2020, HiHope Community.
 使用开源协议：未知
 
+### Copyright (c) OpenHarmony-SIG
+使用开源协议：Apache-2.0
+介绍: OpenHarmony SIG组织，用于孵化OpenHarmony相关开源生态项目
+代码开源地址: [点我进入](https://gitee.com/openharmony-sig/knowledge_demo_smart_home)
+
 ### Copyright (c) 2020, Siwei Xu
 使用开源协议：BSD 3-Clause License
 
@@ -113,7 +118,7 @@ Android APP对应版本号:
 
 ### Copyright (c) 未知 @lengqinjie
 使用开源协议：无（或未知）
-代码开源地址：https://gitee.com/lengqinjie/bearpi_hm_nano
+代码开源地址：[点我进入](https://gitee.com/lengqinjie/bearpi_hm_nano)
 
 # 小小的须知（不知道也没关系）
 
