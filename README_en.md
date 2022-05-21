@@ -68,3 +68,33 @@ Android APP version number:
 
 As Haohanyh first answer sheet on the development of HarmonyOS Hardware, We have the confidence and ability to make such a project a new starting point for us.
 
+> This project Phase three work was over, And now Android APP has suspended maintenance, Stay tuned maintenance in July and a solution that needs to be released recently.
+
+# Open source protocols used by the project
+
+### Copyright (c) 2020 Nanjing Xiaoxiongpai Intelligent Technology Co., Ltd.
+Use open source licenses：Apache-2.0
+
+### Copyright (c) 2020, HiHope Community.
+Use open source licenses：Unknown
+
+### Copyright (c) OpenHarmony-SIG
+Use open source licenses：Apache-2.0
+Introduce: OpenHarmony SIG，Used to incubate OpenHarmony related open source ecological projects.
+Links: [Click Me!](https://gitee.com/openharmony-sig/knowledge_demo_smart_home)
+
+### Copyright (c) 2020, Siwei Xu
+Use open source licenses：BSD 3-Clause License
+
+### Copyright (C) 2019-FUTURE Haohanyh
+### HAMOS is using Haohanyh Computer Software Products Open Source LICENSE
+**Permanent open source, second development and commercial development, Please mark our name: Haohanyh!**
+Use open source licenses：Haohanyh Computer Software Products Open Source LICENSE
+
+### Copyright (c) Unknown @lengqinjie
+Use open source licenses：None or unknown
+Links: [Click Me!](https://gitee.com/lengqinjie/bearpi_hm_nano)
+
+# Give to 2022
+🙏COVID-19 more and more dangerous, So here [Haohanyh](https://hexo.haohanyh.com/2022/01/17/2022-ByeByeCOVID-19/) wish COVID-19 end the spread.
+To every international 👨‍⚕️👩‍⚕️medical staff, to every 👨‍💼👩‍💼online developer, send our highest respect!👍
