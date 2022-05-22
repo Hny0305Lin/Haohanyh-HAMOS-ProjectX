@@ -95,6 +95,9 @@ Use open source licenses：Haohanyh Computer Software Products Open Source LICEN
 Use open source licenses：None or unknown
 Links: [Click Me!](https://gitee.com/lengqinjie/bearpi_hm_nano)
 
+# About Domain
+Haohanyh All open source project, Donations are not currently required. You don't need to worry about project maintenance. We will work hard on the OpenHarmony do our best work.
+
 # Give to 2022
 🙏COVID-19 more and more dangerous, So here [Haohanyh](https://hexo.haohanyh.com/2022/01/17/2022-ByeByeCOVID-19/) wish COVID-19 end the spread.
 To every international 👨‍⚕️👩‍⚕️medical staff, to every 👨‍💼👩‍💼online developer, send our highest respect!👍
