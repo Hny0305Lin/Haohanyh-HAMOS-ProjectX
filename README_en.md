@@ -66,6 +66,17 @@ Android APP version number:
 | ?.?.??? | 🌐Earth | ????.??.?? |
 | ...... | ...... | ...... |
 
+HarmonyOS HAP version number:
+
+| Version Number | Version Code | Release Date |
+|:----|:----:|:----:|
+| ?.?.??? | ⭐Aurora | ????.??.?? |
+| ?.?.??? | ⛰️Basin | ????.??.?? |
+| ?.?.??? | ☄️Comet | ????.??.?? |
+| ?.?.??? | 🏜️Desert | ????.??.?? |
+| ?.?.??? | 🌐Earth | ????.??.?? |
+| ...... | ...... | ...... |
+
 As Haohanyh first answer sheet on the development of HarmonyOS Hardware, We have the confidence and ability to make such a project a new starting point for us.
 
 > This project Phase three work was over, And now Android APP has suspended maintenance, Stay tuned maintenance in July and a solution that needs to be released recently.
