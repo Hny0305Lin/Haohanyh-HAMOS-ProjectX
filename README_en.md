@@ -13,7 +13,7 @@ Developers, all the required information is here!:[Welcome-to-Gitee-and-click-he
 
 ### Hi3881 BearPi Development-board-with-screen
 
-Buy it!:[Taobao,has been removed](https://item.taobao.com/item.htm?id=662078665554)
+Buy it!:[Taobao](https://item.taobao.com/item.htm?id=662078665554)
 
 Principle demonstration diagram:[Welcome-to-Gitee-and-click-download-pdf](https://gitee.com/bearpi/bearpi-hm_micro_small/blob/master/applications/BearPi/BearPi-HM_Micro/docs/board/BearPi-HM%20Micro%E5%8E%9F%E7%90%86%E5%9B%BE.pdf)
 
