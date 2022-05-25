@@ -9,6 +9,7 @@ Haohanyh-HAMOS-ProjectX是我们的一个LiGHTs计划中的部分，目的就是
 
 ### Hi3881 BearPi小熊派 带屏+STM32处理器开发板
 购买地址:[tb重新上架，价格不变但可以携带E53案例板了](https://item.taobao.com/item.htm?id=662078665554)
+芯片资料:[点我下载](https://raw.githubusercontents.com/Hny0305Lin/Haohanyh-HAMOS-ProjectX/master/HaohanyhHAMOSProjectX%20Resource/STM32MP157A.PDF)
 原理图:[点我下载](https://gitee.com/bearpi/bearpi-hm_micro_small/blob/master/applications/BearPi/BearPi-HM_Micro/docs/board/BearPi-HM%20Micro%E5%8E%9F%E7%90%86%E5%9B%BE.pdf)
 有关资料:[gitee点我查看南向硬件开发](https://gitee.com/bearpi/bearpi-hm_micro_small) [gitee点我查看北向APP开发](https://gitee.com/bearpi/bearpi-hm_micro_app)
 
