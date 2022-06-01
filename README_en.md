@@ -32,6 +32,7 @@ Developers, all the required information is here!:[https://gitee.com/hihopeorg/H
 |China 51CTO|[Click me!](https://ost.51cto.com/posts/12170)|
 |China Elecfans|[Click me!](https://bbs.elecfans.com/jishu_2277832_1_1.html)|
 |China Zhihu|[Click me!](https://zhuanlan.zhihu.com/p/510892259)|
+|Global V2EX|[Click me!](https://v2ex.com/t/854406)|
 |Haohanyh Hexo|[Update later]()|
 
 # The first project to use our own Chinese open source protocol!

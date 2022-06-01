@@ -3,27 +3,38 @@ Haohanyh-HAMOS-ProjectX是我们的一个LiGHTs计划中的部分，目的就是
 
 # 使用到的硬件 和 硬件重要资料
 ### Hi3861 BearPi小熊派 小型主板
-购买地址:[tb](https://item.taobao.com/item.htm?spm=a1z10.5-c-s.w4002-22244473708.15.59475f69JPXE93&id=633296694816)
-芯片资料:[点我下载](https://gitee.com/bearpi/bearpi-hm_nano/raw/master/applications/BearPi/BearPi-HM_Nano/docs/board/BearPi_HM%20Nano%20%E8%8A%AF%E7%89%87%E6%89%8B%E5%86%8C.pdf)
-有关资料:[gitee点我查看](https://gitee.com/bearpi/bearpi-hm_nano)
+> 购买地址:[tb](https://item.taobao.com/item.htm?spm=a1z10.5-c-s.w4002-22244473708.15.59475f69JPXE93&id=633296694816)
+> 芯片资料:[点我下载](https://gitee.com/bearpi/bearpi-hm_nano/raw/master/applications/BearPi/BearPi-HM_Nano/docs/board/BearPi_HM%20Nano%20%E8%8A%AF%E7%89%87%E6%89%8B%E5%86%8C.pdf)
+> 有关资料:[gitee点我查看](https://gitee.com/bearpi/bearpi-hm_nano)
 
 ### Hi3881 BearPi小熊派 带屏+STM32处理器开发板
-购买地址:[tb重新上架，价格不变但可以携带E53案例板了](https://item.taobao.com/item.htm?id=662078665554)
-芯片资料:[点我下载](https://raw.githubusercontents.com/Hny0305Lin/Haohanyh-HAMOS-ProjectX/master/HaohanyhHAMOSProjectX%20Resource/STM32MP157A.PDF)
-原理图:[点我下载](https://gitee.com/bearpi/bearpi-hm_micro_small/blob/master/applications/BearPi/BearPi-HM_Micro/docs/board/BearPi-HM%20Micro%E5%8E%9F%E7%90%86%E5%9B%BE.pdf)
-有关资料:[gitee点我查看南向硬件开发](https://gitee.com/bearpi/bearpi-hm_micro_small) [gitee点我查看北向APP开发](https://gitee.com/bearpi/bearpi-hm_micro_app)
+> 购买地址:[tb重新上架，价格不变但可以携带E53案例板了](https://item.taobao.com/item.htm?id=662078665554)
+> 芯片资料:[点我下载](https://raw.githubusercontents.com/Hny0305Lin/Haohanyh-HAMOS-ProjectX/master/HaohanyhHAMOSProjectX%20Resource/STM32MP157A.PDF)
+> 原理图:[点我下载](https://gitee.com/bearpi/bearpi-hm_micro_small/blob/master/applications/BearPi/BearPi-HM_Micro/docs/board/BearPi-HM%20Micro%E5%8E%9F%E7%90%86%E5%9B%BE.pdf)
+> 有关资料:[gitee点我查看南向硬件开发](https://gitee.com/bearpi/bearpi-hm_micro_small) [gitee点我查看北向APP开发](https://gitee.com/bearpi/bearpi-hm_micro_app)
 
-### Hi3861 Hihope润和 开发板
-购买地址:[tb](https://item.taobao.com/item.htm?id=622343426064)
-芯片资料:受限制 或 找不到
-有关资料:[gitee点我查看](https://gitee.com/hihopeorg/HarmonyOS-IoT-Application-Development)
+### Hi3861 Hihope润和Wifiiot 开发板
+> 购买地址:[tb](https://item.taobao.com/item.htm?id=622343426064)
+### Hi3861 Hihope润和Wifiiot 资料系列:
+
+| 资料信息 | 文件情况 | 下载地址 |
+|:----|:----:|:----:|
+| 芯片资料 | *Not Found* | 受限制 或 找不到 |
+| 有关资料 | Link to Gitee | [gitee点我查看](https://gitee.com/hihopeorg/HarmonyOS-IoT-Application-Development) |
+| 温湿度传感器 AHT20 | PDF | [点我下载]() |
+| OLED屏幕板 | PDF + **C Header** + **C Source** | [点我下载]() |
+| Hi3861 | PDF | [点我下载]() |
+| CH340G | PDF | [点我下载]() |
+
+### 国内外网站发布的文章地址
 
 | 文章地址汇总 | 链接 |
 |:----|----:|
 |51cto文章地址：|[点我访问](https://ost.51cto.com/posts/12170)|
 |电子发烧友地址:|[点我访问](https://bbs.elecfans.com/jishu_2277832_1_1.html)|
 |知乎文章:|[点我访问](https://zhuanlan.zhihu.com/p/510892259)|
-|浩瀚银河Hexo:|[正在编写]|
+|*New!* V2EX:|[点我访问](https://v2ex.com/t/854406)|
+|*New!* 浩瀚银河Hexo:|[即将发布]()|
 
 # 首个采用浩瀚银河的自有中文开源协议项目...
 
@@ -94,7 +105,7 @@ HarmonyOS HAP对应版本号:
 
 作为浩瀚银河首次在鸿蒙操作系统开发上，交出的一份答卷，我们有信心，有能力，让这样的项目成为我们全新的起点。
 
-> 项目（很难5月中旬搞定了，我们决定跳票了~）
+> 项目（短暂结束）
 >
 > 项目预估5月中旬~6月间完工，届时将成为一份**100%完工、100%开源**的完美作业。
 > 项目三期工作结束，已完工，目前维护暂停，敬请期待暑期维护和近期解决方案、MD教程！！！
@@ -124,12 +135,8 @@ HarmonyOS HAP对应版本号:
 
 ### 版权所有 (C) 2019-FUTURE 浩瀚银河，版权所有。
 ### HAMOS 使用 浩瀚银河计算机软件产品源代码开放协议
-**永久开源，二次开发和商业化请署名“浩瀚银河”**
+**永久开源，二次开发请署名“浩瀚银河”**
 使用开源协议：Haohanyh Computer Software Products Open Source LICENSE
-
-### Copyright (c) 未知 @lengqinjie
-使用开源协议：无（或未知）
-代码开源地址：[点我进入](https://gitee.com/lengqinjie/bearpi_hm_nano)
 
 # 小小的须知（不知道也没关系）
 
@@ -146,6 +153,10 @@ HarmonyOS HAP对应版本号:
 # 关于捐赠
 
 浩瀚银河的此开源项目，目前并不需要各位的捐赠，各位也无需担心项目维护问题，我们会努力在鸿蒙硬件操作系统上面，唱出我们优秀的作品！
+
+# 关于商业化该项目
+
+请取得部分未使用开源协议的作者的同意，即可将该项目商业化。
 
 # 送给2022年的今天...
 
