@@ -9,7 +9,7 @@ Haohanyh-HAMOS-ProjectX是我们的一个LiGHTs计划中的部分，目的就是
 
 ### Hi3881 BearPi小熊派 带屏+STM32处理器开发板
 > 购买地址:[tb重新上架，价格不变但可以携带E53案例板了](https://item.taobao.com/item.htm?id=662078665554)
-> 芯片资料:[点我下载](https://raw.githubusercontents.com/Hny0305Lin/Haohanyh-HAMOS-ProjectX/master/HaohanyhHAMOSProjectX%20Resource/STM32MP157A.PDF)
+> 芯片资料:[点我下载](https://github.com/Hny0305Lin/Haohanyh-HAMOS-ProjectX/raw/master/HaohanyhHAMOSProjectX%20Resource/BearPi/%E9%B8%BF%E8%92%99%C2%B7%E5%8F%94%20Micro/STM32MP157A.PDF)
 > 原理图:[点我下载](https://gitee.com/bearpi/bearpi-hm_micro_small/blob/master/applications/BearPi/BearPi-HM_Micro/docs/board/BearPi-HM%20Micro%E5%8E%9F%E7%90%86%E5%9B%BE.pdf)
 > 有关资料:[gitee点我查看南向硬件开发](https://gitee.com/bearpi/bearpi-hm_micro_small) [gitee点我查看北向APP开发](https://gitee.com/bearpi/bearpi-hm_micro_app)
 
@@ -21,10 +21,10 @@ Haohanyh-HAMOS-ProjectX是我们的一个LiGHTs计划中的部分，目的就是
 |:----|:----:|:----:|
 | 芯片资料 | *Not Found* | 受限制 或 找不到 |
 | 有关资料 | Link to Gitee | [gitee点我查看](https://gitee.com/hihopeorg/HarmonyOS-IoT-Application-Development) |
-| 温湿度传感器 AHT20 | PDF | [点我下载]() |
-| OLED屏幕板 | PDF + **C Header** + **C Source** | [点我下载]() |
-| Hi3861 | PDF | [点我下载]() |
-| CH340G | PDF | [点我下载]() |
+| 温湿度传感器 AHT20 | PDF | [点我下载](https://github.com/Hny0305Lin/Haohanyh-HAMOS-ProjectX/raw/master/HaohanyhHAMOSProjectX%20Resource/Hihope/AHT20/AHT20_%E6%B8%A9%E6%B9%BF%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8.PDF) |
+| OLED屏幕板 | PDF + **C Header** + **C Source** | [点我下载](https://github.com/Hny0305Lin/Haohanyh-HAMOS-ProjectX/tree/master/HaohanyhHAMOSProjectX%20Resource/Hihope/SSD1306) |
+| Hi3861 | PDF | [点我下载](https://github.com/Hny0305Lin/Haohanyh-HAMOS-ProjectX/tree/master/HaohanyhHAMOSProjectX%20Resource/Hihope/Hi3861_MotherBoard_And_CH340G) |
+| CH340G | PDF | [点我下载](https://github.com/Hny0305Lin/Haohanyh-HAMOS-ProjectX/tree/master/HaohanyhHAMOSProjectX%20Resource/Hihope/Hi3861_MotherBoard_And_CH340G) |
 
 ### 国内外网站发布的文章地址
 
@@ -35,6 +35,7 @@ Haohanyh-HAMOS-ProjectX是我们的一个LiGHTs计划中的部分，目的就是
 |知乎文章:|[点我访问](https://zhuanlan.zhihu.com/p/510892259)|
 |*New!* V2EX:|[点我访问](https://v2ex.com/t/854406)|
 |*New!* 浩瀚银河Hexo:|[即将发布]()|
+|*Stay tuned!* 解决方案 来源Github:|[即将发布]()|
 
 # 首个采用浩瀚银河的自有中文开源协议项目...
 
