@@ -33,6 +33,10 @@
             android:layout_height="280dp"
             android:orientation="horizontal">
 
+            <Space
+                android:layout_width="30dp"
+                android:layout_height="match_parent" />
+
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
@@ -135,7 +139,7 @@
 
                 <EditText
                     android:id="@+id/editText1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="160dp"
                     android:layout_height="50dp"
                     android:ems="10"
                     android:hint="点击我填写数值"
@@ -145,7 +149,7 @@
 
                 <EditText
                     android:id="@+id/editText2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="160dp"
                     android:layout_height="50dp"
                     android:ems="10"
                     android:hint="点击我填写0和1"
@@ -165,6 +169,10 @@
             android:layout_width="match_parent"
             android:layout_height="231dp"
             android:orientation="horizontal">
+
+            <Space
+                android:layout_width="30dp"
+                android:layout_height="match_parent" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -243,7 +251,34 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"/>
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Space
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent" />
+
+                    <Button
+                        android:id="@+id/exitliandong"
+                        android:layout_width="130dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/button_nihao345345"
+                        android:text="@string/exitliandong"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:onClick="LiandongOver"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
 

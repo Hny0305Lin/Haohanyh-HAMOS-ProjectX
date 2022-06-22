@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="115dp"
+        android:layout_marginBottom="200dp"
         android:orientation="vertical"
         android:paddingLeft="32dp"
         android:paddingRight="32dp">
@@ -55,6 +55,7 @@
                 android:maxLines="1"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout

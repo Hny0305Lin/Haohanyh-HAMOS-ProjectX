@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/minecraft365"
+    android:background="@drawable/hamosv4"
     android:orientation="vertical">
 
     <LinearLayout
@@ -12,13 +12,13 @@
         android:orientation="horizontal"
         android:background="@color/white">
 
-        <ImageButton
+        <!--ImageButton
             android:id="@+id/imageButtonClickToOld"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:background="@drawable/exit_new_icon"
-            android:onClick="ClickToOld"/>
+            android:onClick="ClickToOld"/-->
 
         <TextView
             android:id="@+id/textView"

@@ -281,6 +281,11 @@ public class ExceedActivity extends Activity {
         boolon = 0;
     }
 
+    public void LiandongOver(View view) {
+        Intent intent = new Intent(ExceedActivity.this, MainNewActivity.class);
+        startActivity(intent);
+    }
+
     private boolean ExceedCheck() {
 
         num = txtnum.getText().toString();
