@@ -34,8 +34,8 @@ Haohanyh-HAMOS-ProjectX是我们的一个LiGHTs计划中的部分，目的就是
 |电子发烧友地址:|[点我访问](https://bbs.elecfans.com/jishu_2277832_1_1.html)|
 |知乎文章:|[点我访问](https://zhuanlan.zhihu.com/p/510892259)|
 |*New!* V2EX:|[点我访问](https://v2ex.com/t/854406)|
-|*New!* 浩瀚银河Hexo:|[即将发布]()|
-|*Stay tuned!* 解决方案 来源Github:|[即将发布]()|
+|*New!* 浩瀚银河Hexo:|[点我访问](https://hexo.haohanyh.com/2022/06/01/HAMOS-2022-New)|
+|*Stay tuned!* 解决方案 来源Github:|[7月见面]()|
 
 # 首个采用浩瀚银河的自有中文开源协议项目...
 
@@ -78,7 +78,7 @@ Haohanyh-HAMOS-ProjectX是我们的一个LiGHTs计划中的部分，目的就是
 
 | 软件开发情况 | 完工程度 | 后续更新情况 |
 |:----|:----:|:----:|
-| Android APP | 92.5% | 三期结束，92.5%，剩下的7.5%属于还没完成的代码量，目前计划结束一段时间，暑期继续维护。 |
+| Android APP | 92.5% | 三期结束，目前计划结束一段时间，暑期继续维护。 |
 | HarmonyOS HAP | 0% | 准备开始，并且暑期与Android APP联动发展! |
 | Windows EXE | 0% | 计划中... |
 
@@ -87,7 +87,7 @@ Android APP对应版本号:
 | 版本号 | 对应开发版本号 | 发布日期 |
 |:----|:----:|:----:|
 | 3.0.120 | ⭐Aurora | 2022.5.14 |
-| 4.0.1 | ⛰️Basin | 2022.5.19 |
+| 4.1.6 | ⛰️Basin | 2022.6.22 |
 | ?.?.??? | ☄️Comet | ????.??.?? |
 | ?.?.??? | 🏜️Desert | ????.??.?? |
 | ?.?.??? | 🌐Earth | ????.??.?? |

@@ -33,7 +33,7 @@ Developers, all the required information is here!:[https://gitee.com/hihopeorg/H
 |China Elecfans|[Click me!](https://bbs.elecfans.com/jishu_2277832_1_1.html)|
 |China Zhihu|[Click me!](https://zhuanlan.zhihu.com/p/510892259)|
 |Global V2EX|[Click me!](https://v2ex.com/t/854406)|
-|Haohanyh Hexo|[Update later]()|
+|Haohanyh Hexo|[Click me!](https://hexo.haohanyh.com/2022/06/01/HAMOS-2022-New)|
 
 # The first project to use our own Chinese open source protocol!
 
@@ -61,7 +61,7 @@ Android APP version number:
 | Version Number | Version Code | Release Date |
 |:----|:----:|:----:|
 | 3.0.120 | ⭐Aurora | 2022.5.14 |
-| 4.0.1 | ⛰️Basin | 2022.5.19 |
+| 4.1.6 | ⛰️Basin | 2022.6.22 |
 | ?.?.??? | ☄️Comet | ????.??.?? |
 | ?.?.??? | 🏜️Desert | ????.??.?? |
 | ?.?.??? | 🌐Earth | ????.??.?? |
@@ -102,10 +102,6 @@ Use open source licenses：BSD 3-Clause License
 ### HAMOS is using Haohanyh Computer Software Products Open Source LICENSE
 **Permanent open source, second development and commercial development, Please mark our name: Haohanyh!**
 Use open source licenses：Haohanyh Computer Software Products Open Source LICENSE
-
-### Copyright (c) Unknown @lengqinjie
-Use open source licenses：None or unknown
-Links: [Click Me!](https://gitee.com/lengqinjie/bearpi_hm_nano)
 
 # About Domain
 Haohanyh All open source project, Donations are not currently required. You don't need to worry about project maintenance. We will work hard on the OpenHarmony do our best work.
